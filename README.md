@@ -1,53 +1,51 @@
-### Tech Stack
+# Next.js & NextUI Template
 
-- 🚀 Next.js + TypeScript
-- ➰ Framer Motion
-- 🍃 Tailwind CSS
-- ✍ MDX
+This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
 
-### Running the Project
+## Technologies Used
 
-To get started, I recommend [installing pnpm](https://pnpm.io/installation) since it's the package manager used in this repository.
+- [Next.js 14](https://nextjs.org/docs/getting-started)
+- [NextUI v2](https://nextui.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind Variants](https://tailwind-variants.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
 
-Begin by forking the repository and then cloning it to your local machine:
+## How to Use
 
-```
-git clone <your-fork>
-```
+### Use the template with create-next-app
 
-Navigate to the project's root directory:
+To create a new project based on this template using `create-next-app`, run the following command:
 
-```
-cd ./enji.dev
-```
-
-Next, copy the development version of the `env` file:
-
-```
-cp ./apps/enji.dev/env.example ./apps/enji.dev/env.local
+```bash
+npx create-next-app -e https://github.com/nextui-org/next-app-template
 ```
 
-Now, you have the `env.local` file ready for configuration:
+### Install dependencies
 
-```
-DATABASE_URL = your-database-connection-string
-SALT_IP_ADDRESS = super-secret
-```
+You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
-For the `DATABASE_URL` use your database connection string. I personally use the free version of [MongoDB](https://www.mongodb.com/), and you can do the same by creating a database there and [adding the connection string](https://www.mongodb.com/basics/mongodb-connection-string) to the `env.local`.
-
-As for `SALT_IP_ADDRESS`, feel free to fill it with some of your secret words. It acts as a salt for hashing users' IP addresses.
-
-Once configuration is complete, still at the root of the project directory, install the required dependencies:
-
-```
-pnpm install
+```bash
+npm install
 ```
 
-Finally, run the project:
+### Run the development server
 
-```
-pnpm dev
+```bash
+npm run dev
 ```
 
-Now, your project should be up and running smoothly!
+### Setup pnpm (optional)
+
+If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+
+```bash
+public-hoist-pattern[]=*@nextui-org/*
+```
+
+After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+
+## License
+
+Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
