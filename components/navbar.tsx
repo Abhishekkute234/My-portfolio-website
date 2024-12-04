@@ -88,12 +88,22 @@ export const Navbar = () => {
           <Button
             isExternal
             as={Link}
+            className="text-sm font-normal text-default-600"
+            href={siteConfig.links.sponsor}
+            color="primary"
+            variant="light"
+          >
+            Login
+          </Button>
+          <Button
+            isExternal
+            as={Link}
             className="text-sm font-normal text-default-600 text-white bg-blue-600"
             href={siteConfig.links.sponsor}
             color="primary"
             variant="shadow"
           >
-            My resume
+            Start Free Trial
           </Button>
         </NavbarItem>
       </NavbarContent>
