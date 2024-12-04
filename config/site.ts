@@ -60,7 +60,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/DarkInventor",
+    github: "https://github.com/Abhishekkute234",
     twitter: "https://twitter.com/kathanmehtaa",
     docs: "#",
     discord: "#",
