@@ -19,14 +19,13 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
       <Badge />
       <div className="inline-block max-w-sm lg:max-w-4xl text-center justify-center text-2xl">
-        <h1 className={title({ size: "lg" })}>Make&nbsp;</h1>
+        <h1 className={title({ size: "lg" })}>Welcome &nbsp;</h1>
         <h1 className={title({ color: "violet", size: "lg" })}>
-          Beautiful&nbsp;
+          Portfolio website&nbsp;
         </h1>
         <br />
-        <h1 className={title({ size: "lg" })}>Websites using Easy NextUI</h1>
         <h2 className="font-normal text-gray-500 py-2">
-          Beautiful, fast and modern Easy UI template.
+          Modern portfolio website
         </h2>
       </div>
 
@@ -40,7 +39,7 @@ export default function Home() {
           })}
           href={siteConfig.links.docs}
         >
-          Documentation
+          Resume
         </Link>
         <Link
           isExternal
@@ -59,7 +58,7 @@ export default function Home() {
         </h1>
         <FeaturesBento />
       </div>
-      <LightBg />
+
       <Integrations />
       <LastButNotLeast />
     </section>
