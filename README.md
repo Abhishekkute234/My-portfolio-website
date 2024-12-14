@@ -1,51 +1,71 @@
-# Next.js & NextUI Template
+<div>
+  <h1>
+    Enji Kusnadi
+    &middot;
+    <img src="https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fwww.enji.dev"/>
+    <img src="https://img.shields.io/github/deployments/enjidev/enji.dev/production?label=production&style=flat-square"/>
+    <img src="https://img.shields.io/github/commit-activity/m/enjidev/enji.dev?style=flat-square"/>
+  </h1>
+</div>
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+A monorepo for my personal website and projects, built with Turborepo and pnpm.
 
-## Technologies Used
+## 📘 [enji.dev](https://www.enji.dev)
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+A personal website with a blog, project showcase, and work information.
 
-## How to Use
+https://user-images.githubusercontent.com/95107212/210668021-fd49431f-85a3-4bd7-bf9e-09639cb38922.mp4
 
-### Use the template with create-next-app
+### Tech Stack
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- 🚀 Next.js + TypeScript
+- ➰ Framer Motion
+- 🍃 Tailwind CSS
+- ✍ MDX
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+### Running the Project
+
+To get started, I recommend [installing pnpm](https://pnpm.io/installation) since it's the package manager used in this repository.
+
+Begin by forking the repository and then cloning it to your local machine:
+
+```
+git clone <your-fork>
 ```
 
-### Install dependencies
+Navigate to the project's root directory:
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
+```
+cd ./enji.dev
 ```
 
-### Run the development server
+Next, copy the development version of the `env` file:
 
-```bash
-npm run dev
+```
+cp ./apps/enji.dev/env.example ./apps/enji.dev/env.local
 ```
 
-### Setup pnpm (optional)
+Now, you have the `env.local` file ready for configuration:
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
+```
+DATABASE_URL = your-database-connection-string
+SALT_IP_ADDRESS = super-secret
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+For the `DATABASE_URL` use your database connection string. I personally use the free version of [MongoDB](https://www.mongodb.com/), and you can do the same by creating a database there and [adding the connection string](https://www.mongodb.com/basics/mongodb-connection-string) to the `env.local`.
 
-## License
+As for `SALT_IP_ADDRESS`, feel free to fill it with some of your secret words. It acts as a salt for hashing users' IP addresses.
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+Once configuration is complete, still at the root of the project directory, install the required dependencies:
+
+```
+pnpm install
+```
+
+Finally, run the project:
+
+```
+pnpm dev
+```
+
+Now, your project should be up and running smoothly!
