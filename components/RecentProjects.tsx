@@ -1,6 +1,7 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";

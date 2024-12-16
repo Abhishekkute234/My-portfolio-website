@@ -10,6 +10,7 @@ import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { WorldMapDemo } from "@/components/Map";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <Experience />
         <Approach />
         <Footer />
+        <WorldMapDemo />
       </div>
     </main>
   );
