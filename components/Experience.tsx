@@ -4,6 +4,7 @@ import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
+
 const Experience = () => {
   const content = [
     {

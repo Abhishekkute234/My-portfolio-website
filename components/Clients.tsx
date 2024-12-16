@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-
+import Image from "next/image";
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
@@ -29,15 +29,18 @@ const Clients = () => {
           {companies.map((company) => (
             <React.Fragment key={company.id}>
               <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
+                <Image
                   src={company.img}
                   alt={company.name}
                   className="md:w-10 w-5"
+                  width={100} // Add a default width for Image optimization
+                  height={100} // Add a default height for Image optimization
                 />
-                <img
+                <Image
                   src={company.nameImg}
                   alt={company.name}
                   width={company.id === 4 || company.id === 5 ? 100 : 150}
+                  height={100} // You should define a height to maintain aspect ratio
                   className="md:w-24 w-20"
                 />
               </div>
