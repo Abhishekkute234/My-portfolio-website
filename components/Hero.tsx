@@ -6,7 +6,6 @@ import { MenuItem } from "./ui/navbar-menu";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 import React from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
   IconBrandX,
