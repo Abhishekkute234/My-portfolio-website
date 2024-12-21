@@ -1,6 +1,6 @@
-import DotPattern from '../ui/dot-pattern';
-import { skills } from '@/constants/skills';
-import SkillCard from './SkillCard';
+import DotPattern from "../ui/dot-pattern";
+import { skills } from "@/constants/skills";
+import SkillCard from "./SkillCard";
 
 const About = () => {
   return (
@@ -9,13 +9,13 @@ const About = () => {
         <div className="space-y-8 md:text-center">
           <h2 className="h2-bold">About me</h2>
           <p className="regular-paragraph mx-auto max-w-[835px]">
-            Hi 👋, I&apos;m{' '}
-            <span className="text-code text-yellow-600">Adel Guitoun</span>, a
+            Hi 👋, I&apos;m{" "}
+            <span className="text-code text-yellow-600">Abhisek Kute</span>, a
             passionate software engineer with a knack for creating scalable,
             high-performance applications and reusable systems. With a strong
             foundation in <span className="text-green-700">frontend</span> and
             <span className="text-blue-600"> backend technologies</span>, I
-            specialize in crafting solutions that are as impactful for{' '}
+            specialize in crafting solutions that are as impactful for{" "}
             <span className="text-orange-500">users</span> as they are efficient
             for <span className="text-purple-600">developers.</span>
           </p>
