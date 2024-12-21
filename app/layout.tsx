@@ -23,14 +23,7 @@ export const metadata: Metadata = {
   description: `Hi 👋, I'm abhishk kute . I'm a passionate software engineer (SDE) intern at experia innovation private limited, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers.`,
   creator: "abhishek kute",
   applicationName: "My website",
-  keywords: [
-    "Abhishek",
-    "Kute",
-    "Guitoun",
-    "Portfolio",
-    "Next.js",
-    "Software engineer",
-  ],
+  keywords: ["Abhishek", "Kute", "Portfolio", "Next.js", "Software engineer"],
   icons: {
     icon: "./favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -62,8 +55,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "Adel Guitoun - Software Engineer",
-    description: `Hi 👋, I'm Adel Guitoun. I'm a passionate software engineer with a knack for creating scalable, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers.`,
+    title: "Abhishek kute - Software Engineer",
+    description: `Hi 👋, I'm abhishk kute . I'm a passionate software engineer (SDE) intern at experia innovation private limited, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers`,
     card: "summary_large_image",
     site: "@AdelGuitoun",
     images: "/opengraph-image.jpg",
