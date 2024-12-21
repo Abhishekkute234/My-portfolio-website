@@ -1,8 +1,0 @@
-
-> rehype-plugins@0.1.0 build C:\Users\Abhishek\Desktop\My-portfolio-website\packages\rehype-plugins
-> tsup --env.NODE_ENV production
-
-'tsup' is not recognized as an internal or external command,
-operable program or batch file.
- ELIFECYCLE  Command failed with exit code 1.
- WARN   Local package.json exists, but node_modules missing, did you mean to install?
