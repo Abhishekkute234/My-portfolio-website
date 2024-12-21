@@ -5,12 +5,21 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="relative px-6 pb-44" style={{ contain: "layout" }}>
+    <section
+      className="relative px-6 pb-44"
+      style={{
+        contain: "layout",
+        backgroundImage: "url('/my_image.jpg')",
+        backgroundSize: "cover", // Adjust as needed (e.g., 'contain' or '100%')
+        backgroundPosition: "center", // Adjust as needed (e.g., 'top', 'bottom')
+        backgroundRepeat: "no-repeat", // Prevent repeating the image
+      }}
+    >
       <div className="pt-48">
         <h1 className="h1-bold flex flex-col items-start md:items-center">
-          <span>Crafting</span>
-          <span>memorable user &</span>
-          <span>developer experiences</span>
+          <span>Welcome</span>
+          <span>to my </span>
+          <span>portfolio website </span>
         </h1>
       </div>
 
