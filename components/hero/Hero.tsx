@@ -5,21 +5,12 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section
-      className="relative px-6 pb-44"
-      style={{
-        contain: "layout",
-        backgroundImage: "url('/my_image.jpg')",
-        backgroundSize: "cover", // Adjust as needed (e.g., 'contain' or '100%')
-        backgroundPosition: "center", // Adjust as needed (e.g., 'top', 'bottom')
-        backgroundRepeat: "no-repeat", // Prevent repeating the image
-      }}
-    >
+    <section className="relative px-6 pb-44" style={{ contain: "layout" }}>
       <div className="pt-48">
         <h1 className="h1-bold flex flex-col items-start md:items-center">
           <span>Welcome</span>
           <span>to my </span>
-          <span>portfolio website </span>
+          <span>Portfolio website </span>
         </h1>
       </div>
 
@@ -30,7 +21,7 @@ const Hero = () => {
           </p>
           <div>
             <Link
-              href="https://www.linkedin.com/in/adelguitoun/"
+              href="https://www.linkedin.com/in/abhishek-kute-a85822257/"
               target="_blank"
             >
               <AnimatedGradientText className="rounded-full px-5 py-2 text-lg hover:cursor-pointer">
