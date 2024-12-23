@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const NavIcons = () => {
   return (
@@ -21,15 +23,10 @@ const NavIcons = () => {
       </Link>
       <Link
         href="https://www.youtube.com/@keep_it_sorted"
-        className="group flex items-center justify-center gap-x-1.5"
+        className="group flex items-center gap-x-1.5"
         target="_blank"
       >
-        <Image
-          src="/youtube.svg"
-          alt="Link to Abhi's gitHub profile"
-          width={25}
-          height={25}
-        />
+        <FontAwesomeIcon icon={faYoutube} />
         <span className="hidden text-xs text-white opacity-50 transition group-hover:opacity-100 md:inline">
           YouTube
         </span>
