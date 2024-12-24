@@ -39,7 +39,7 @@ const NavIcons = () => {
       >
         <Image
           src="/linkedin.svg"
-          alt="Link to Adel's linkedin profile"
+          alt="Link to abhi's linkedin profile"
           width={28}
           height={28}
         />

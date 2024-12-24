@@ -1,24 +1,24 @@
 export const contacts = [
   {
-    id: 'tweeter',
-    title: 'X - tweeter',
-    icon: '/tweeter.svg',
+    id: 'youtube',
+    title: 'Youtube',
+    icon: '/youtube.svg',
     description: 'Stay updated with my latest posts and thoughts.',
-    path: 'https://x.com/GuitounAdel',
+    path: 'https://www.youtube.com/@keep_it_sorted',
   },
   {
     id: 'linkedin',
     title: 'LinkedIn',
     icon: '/linkedin.svg',
     description: "Let's connect and explore opportunities together.",
-    path: 'https://www.linkedin.com/in/adelguitoun/',
+    path: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
   },
   {
     id: 'email',
     title: 'Email',
     icon: '/email.svg',
     description: 'Feel free to reach out to me directly via email.',
-    path: 'mailto:adeelguitoun@gmail.com',
+    path: 'mailto:kuteabhishek2004@gmail.com',
   },
 ];
 
@@ -32,31 +32,22 @@ export const socialLinks = [
   {
     id: 'github',
     icon: '/github.svg',
-    alt: "Link to Adel's gitHub profile",
-    path: 'https://github.com/adel-gu',
+    alt: "Link to abhishek's gitHub profile",
+    path: 'https://github.com/Abhishekkute234',
   },
   {
-    id: 'tweeter',
-    icon: '/tweeter.svg',
-    alt: "Link to Adel's tweeter profile",
-    path: 'https://x.com/GuitounAdel',
+    id: 'youtube',
+    title: 'Youtube',
+    icon: '/youtube.svg',
+    description: 'Stay updated with my latest posts and thoughts.',
+    path: 'https://www.youtube.com/@keep_it_sorted',
   },
   {
     id: 'linkedin',
+    title: 'LinkedIn',
     icon: '/linkedin.svg',
-    alt: "Link to Adel's linkedin profile",
-    path: 'https://www.linkedin.com/in/adelguitoun/',
+    description: "Let's connect and explore opportunities together.",
+    path: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
   },
-  {
-    id: 'wellfound',
-    icon: '/wellfound.svg',
-    alt: "Link to Adel's wellfound profile",
-    path: 'https://wellfound.com/u/adel-guitoun',
-  },
-  {
-    id: 'medium',
-    icon: '/medium.svg',
-    alt: "Link to Adel's medium profile",
-    path: 'https://medium.com/@adeelguitoun',
-  },
+
 ];

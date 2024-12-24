@@ -61,16 +61,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    title: "Abhishek Kute ",
-    description: `Hi 👋, I'm Abhishek Kute. I'm a passionate software engineer with a knack for creating scalable, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers.`,
-    card: "summary_large_image",
-    site: "@AdelGuitoun",
-    images: "/opengraph-image.jpg",
-  },
-  verification: {
-    google: "k83JtkKiU8MvRqLS05NLwZPSOGLJXbZpzln4wdJ-iPI",
-  },
 };
 
 export default function RootLayout({
