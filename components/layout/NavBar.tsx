@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import NavIcons from "./NavIcons";
+import NavLinks from "./NavLinks";
 
 import {
   Sheet,
@@ -62,7 +63,9 @@ const NavbarContent = () => (
   <header className="relative z-50 flex items-center justify-between">
     <NavIcons />
 
-    <div className="hidden md:block"></div>
+    <div className="hidden md:block">
+      <NavLinks />
+    </div>
 
     <Sheet>
       <SheetTrigger className="md:hidden" asChild>
@@ -70,6 +73,8 @@ const NavbarContent = () => (
       </SheetTrigger>
       <SheetContent side="left" className="border-none">
         <SheetClose />
+
+        <NavLinks />
       </SheetContent>
     </Sheet>
   </header>
