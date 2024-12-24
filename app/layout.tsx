@@ -47,20 +47,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  openGraph: {
-    type: "website",
-    url: "https://www.adelguitoun.com",
-    title: "Adel Guitoun - Software Engineer",
-    description: `Hi 👋, I'm Abhishek Kute. I'm a passionate software engineer with a knack for creating scalable, high-performance applications and reusable systems. With a strong foundation in front-end and back-end technologies, I specialize in crafting solutions that are as impactful for users as they are efficient for developers..`,
-    images: [
-      {
-        url: "/opengraph-image.jpg",
-        width: 1200,
-        height: 628,
-        alt: "Adel Guitoun",
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
