@@ -75,7 +75,7 @@ export const projects = [
       'The Spam Detection and Prevention Tool is a project developed during a hackathon aimed at detecting and preventing spam across various communication channels. This tool provides users with the ability to detect spam messages, emails, multimedia messages (MMS), and short message service (SMS). Additionally, it includes functionality to determine whether phone numbers are associated with spam activity. Furthermore, the project integrates a chatbot where users can seek advice on how to stay safe from spam and fraud.',
     date: 'Sep 2, 2024',
     github: 'https://github.com/Abhishekkute234/SpamGuard.git',
-    live: 'https://adproduction-2375.netlify.app/',
+    live: 'https://spam-detection-tool-1.onrender.com//',
     color: 'rgba(79,70,229)',
     btnBg: 'rgba(55,48,163,0.5)',
     btnBgHover: 'rgba(30,27,75)',
