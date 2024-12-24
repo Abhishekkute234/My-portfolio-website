@@ -14,32 +14,32 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
+    title: "Rust for developer ",
     description: "Explore the birth of groundbreaking ideas and inventions.",
     header: <Skeleton />,
     icon: <IconClipboardCopy className="size-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
+    title: "Data structure and Algorithm in c++",
     description: "Dive into the transformative power of technology.",
     header: <Skeleton />,
     icon: <IconFileBroken className="size-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
+    title: "System design",
     description: "Discover the beauty of thoughtful and functional design.",
     header: <Skeleton />,
     icon: <IconSignature className="size-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "Backend and REST API",
     description:
       "Understand the impact of effective communication in our lives.",
     header: <Skeleton />,
     icon: <IconTableColumn className="size-4 text-neutral-500" />,
   },
   {
-    title: "The Pursuit of Knowledge",
+    title: "Data science ",
     description: "Join the quest for understanding and enlightenment.",
     header: <Skeleton />,
     icon: <IconArrowWaveRightUp className="size-4 text-neutral-500" />,
@@ -51,7 +51,7 @@ const items = [
     icon: <IconBoxAlignTopLeft className="size-4 text-neutral-500" />,
   },
   {
-    title: "The Spirit of Adventure",
+    title: "Data pre processing and data cleaning ",
     description: "Embark on exciting journeys and thrilling discoveries.",
     header: <Skeleton />,
     icon: <IconBoxAlignRightFilled className="size-4 text-neutral-500" />,
