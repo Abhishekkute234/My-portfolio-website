@@ -10,6 +10,7 @@ const Hero = () => {
         <h1 className="h1-bold flex flex-col items-start md:items-center">
           <span>Welcome</span>
           <span>to my </span>
+
           <span>Portfolio website </span>
         </h1>
       </div>
