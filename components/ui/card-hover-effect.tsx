@@ -12,6 +12,7 @@ export const HoverEffect = ({
     title: string;
     description: string;
     link: string;
+    image: string; // Added image property
   }[];
   className?: string;
 }) => {
@@ -50,6 +51,8 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
+            <CardImage src={item.image} alt={item.title} />{" "}
+            {/* Added CardImage */}
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
@@ -79,6 +82,7 @@ export const Card = ({
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -92,6 +96,7 @@ export const CardTitle = ({
     </h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
@@ -108,5 +113,26 @@ export const CardDescription = ({
     >
       {children}
     </p>
+  );
+};
+
+// New CardImage Component
+export const CardImage = ({
+  src,
+  alt,
+  className,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) => {
+  return (
+    <div className="relative mb-4 w-full h-48 overflow-hidden rounded-xl">
+      <img
+        src={src}
+        alt={alt}
+        className={cn("object-cover w-full h-full rounded-xl", className)}
+      />
+    </div>
   );
 };
