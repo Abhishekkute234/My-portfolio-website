@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { WorldMap } from "../ui/world-map";
 
 const Footer = () => {
