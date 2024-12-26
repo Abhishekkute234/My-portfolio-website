@@ -3,11 +3,11 @@ import AnimatedGradientText from "../ui/animated-gradient-text";
 import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import Link from "next/link";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
-`;
+
+const words = `Hey everyone my self abhishek kute . An SDE intern , a freelancer and a content creator . I am here to share my knowledge and learn from you all . I am open to collaborate and learn from you all .`;
 const Hero = () => {
   return (
-    <section className="relative px-6 pb-30" style={{ contain: "layout" }}>
+    <section className="pb-30 relative px-6" style={{ contain: "layout" }}>
       <div className="pt-48">
         <h1 className="h1-bold flex flex-col items-start md:items-center">
           <span>Welcome</span>
