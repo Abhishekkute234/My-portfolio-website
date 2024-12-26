@@ -2,10 +2,12 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "../ui/animated-gradient-text";
 import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import Link from "next/link";
-
+import { TextGenerateEffect } from "../ui/text-generate-effect";
+const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
+`;
 const Hero = () => {
   return (
-    <section className="relative px-6 pb-44" style={{ contain: "layout" }}>
+    <section className="relative px-6 pb-30" style={{ contain: "layout" }}>
       <div className="pt-48">
         <h1 className="h1-bold flex flex-col items-start md:items-center">
           <span>Welcome</span>
@@ -14,7 +16,6 @@ const Hero = () => {
           <span>Portfolio website </span>
         </h1>
       </div>
-
       <div className="mt-12 flex flex-col-reverse gap-8 md:flex-row md:justify-center md:gap-20 lg:gap-32">
         <div className="flex w-fit flex-col items-start gap-4">
           <p className="font-Silkscreen font-normal uppercase text-gray-400 md:mt-8 md:text-2xl">
@@ -57,7 +58,6 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
       <div className="pointer-events-none absolute top-0 -z-20 size-full overflow-hidden opacity-50 [mask-image:radial-gradient(900px_circle_at_top,#000,transparent)]">
         <AnimatedGridPattern
           numSquares={120}
@@ -76,10 +76,10 @@ const Hero = () => {
           className="inset-x-[4.5px] inset-y-[-30%] h-[150%]"
         />
       </div>
-
       <div className="pointer-events-none absolute inset-0 -z-10 [mask-image:linear-gradient(#000_50%,transparent)]">
         <div className="grid-pattern pointer-events-none absolute inset-0" />
       </div>
+      <TextGenerateEffect words={words} />
     </section>
   );
 };
