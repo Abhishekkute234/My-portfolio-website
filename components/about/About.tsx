@@ -44,7 +44,7 @@ const About = () => {
       ),
     },
     {
-      title: "Early 2023",
+      title: " 2023",
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
