@@ -74,8 +74,8 @@ export function WorldMap({ dots = [], lineColor = "#0ea5e9" }: MapProps) {
                   pathLength: 1,
                 }}
                 transition={{
-                  duration: 1,
-                  delay: 0.5 * i,
+                  duration: 2,
+                  delay: 2 * i,
                   ease: "easeOut",
                 }}
                 key={`start-upper-${i}`}
