@@ -1,5 +1,5 @@
-import DotPattern from '../ui/dot-pattern';
-import ReviewDemo from './ReviewDemo';
+import DotPattern from "../ui/dot-pattern";
+import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {
   return (
@@ -8,7 +8,7 @@ const Reviews = () => {
         <h3 className="h3-bold">Sincere words from incredible people</h3>
       </div>
 
-      <ReviewDemo />
+      <ReviewCard />
 
       <DotPattern
         width={20}
