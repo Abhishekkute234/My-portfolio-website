@@ -2,18 +2,27 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "../ui/animated-gradient-text";
 import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import Link from "next/link";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { FlipWords } from "../ui/flip-words";
+const words = [
+  "SDE intern ",
+  "Freelancer ",
+  "Web developer ",
+  "App developer ",
+  "Data analyst",
+];
 
-const words = `Hey everyone my self abhishek kute . An SDE intern , a freelancer and a content creator . I am here to share my knowledge and learn from you all . I am open to collaborate and learn from you all .`;
 const Hero = () => {
   return (
-    <section className="pb-30 relative px-6" style={{ contain: "layout" }}>
+    <section className="relative px-6" style={{ contain: "layout" }}>
       <div className="pt-48">
         <h1 className="h1-bold flex flex-col items-start md:items-center">
           <span>Welcome</span>
           <span>to my </span>
 
           <span>Portfolio website </span>
+          <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
+            <FlipWords words={words} /> <br />
+          </div>
         </h1>
       </div>
       <div className="mt-12 flex flex-col-reverse gap-8 md:flex-row md:justify-center md:gap-20 lg:gap-32">
@@ -79,7 +88,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-0 -z-10 [mask-image:linear-gradient(#000_50%,transparent)]">
         <div className="grid-pattern pointer-events-none absolute inset-0" />
       </div>
-      <TextGenerateEffect words={words} />
+      <div className="flex h-16 items-center justify-center"></div>
     </section>
   );
 };
