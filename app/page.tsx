@@ -4,6 +4,7 @@ import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import Reviews from "@/components/review/Reviews";
+import { HeroParallaxDemo } from "@/components/softskills/SoftSkills";
 import Techs from "@/components/techs/Techs";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Techs />
+      <HeroParallaxDemo />
       <ProjectsSection />
       <Articles />
       <Reviews />

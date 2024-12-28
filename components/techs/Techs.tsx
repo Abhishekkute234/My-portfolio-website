@@ -1,11 +1,17 @@
-import { slugs, techs } from '@/constants/skills';
-import DotPattern from '../ui/dot-pattern';
-import IconCloud from '../ui/icon-cloud';
-import TechTag from './TechTag';
+import { slugs, techs } from "@/constants/skills";
+import DotPattern from "../ui/dot-pattern";
+import IconCloud from "../ui/icon-cloud";
+import TechTag from "./TechTag";
 
 const Techs = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden px-6 py-24">
+    <section
+      id="skills"
+      className="relative flex flex-col items-center justify-center overflow-hidden px-6 py-24"
+    >
+      <div className="z-10 flex flex-col px-6 py-10 md:items-center md:justify-center">
+        <h3 className="h2-bold">Technical skills </h3>
+      </div>
       <div className="relative">
         <div className="flex flex-col items-center justify-center gap-8 rounded-lg bg-none ">
           <p className="regular-paragraph z-10 max-w-[850px] md:text-center">
