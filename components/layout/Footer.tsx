@@ -4,7 +4,7 @@ import { WorldMap } from "../ui/world-map";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-2  py-2 xl:flex-row xl:justify-evenly">
+    <footer className="relative flex items-center justify-center bg-black px-6 py-24">
       <WorldMap
         dots={[
           {
