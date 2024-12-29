@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
+import { title } from "process";
 
 export function HeroParallaxDemo() {
   return (
-    <section className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24">
+    <section className=" bg-black ">
       <HeroParallax products={products} />
     </section>
   );
