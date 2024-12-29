@@ -14,7 +14,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects">
+    <section
+      id="projects"
+      className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24"
+    >
       <div className="">
         <div className="relative">
           <div className="flex flex-col-reverse items-center md:flex-row md:items-start md:justify-evenly lg:justify-center lg:gap-8">

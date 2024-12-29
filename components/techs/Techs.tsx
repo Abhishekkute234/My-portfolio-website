@@ -7,7 +7,7 @@ const Techs = () => {
   return (
     <section
       id="skills"
-      className="relative flex flex-col items-center justify-center overflow-hidden px-6 py-24"
+      className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24"
     >
       <div className="z-10 flex flex-col px-6 py-10 md:items-center md:justify-center">
         <h3 className="h2-bold">Technical skills </h3>

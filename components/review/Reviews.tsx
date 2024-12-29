@@ -3,7 +3,7 @@ import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {
   return (
-    <section id="team" className="relative py-24">
+    <section id="team" className="relative bg-black py-24">
       <div className="z-10 flex flex-col px-6 md:items-center md:justify-center">
         <h3 className="h3-bold">Team </h3>
       </div>

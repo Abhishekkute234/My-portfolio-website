@@ -37,6 +37,10 @@ const testimonials = [
   },
 ];
 const ReviewCard = () => {
-  return <AnimatedTestimonials testimonials={testimonials} />;
+  return (
+    <section className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24">
+      <AnimatedTestimonials testimonials={testimonials} />
+    </section>
+  );
 };
 export default ReviewCard;

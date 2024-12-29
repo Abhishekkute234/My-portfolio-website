@@ -135,7 +135,7 @@ const About = () => {
   return (
     <section
       id="experiences"
-      className="relative flex items-center justify-center px-6 py-24"
+      className="relative flex items-center justify-center bg-black px-6 py-24"
     >
       <div className="z-10">
         <div className="space-y-8 md:text-center">

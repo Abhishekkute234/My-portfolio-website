@@ -2,7 +2,10 @@ import ArticleCard from "./ArticleCard";
 
 const Articles = () => {
   return (
-    <section id="notes" className="relative px-6 py-24 xl:px-56">
+    <section
+      id="notes"
+      className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24"
+    >
       <div>
         <h2 className="h2-bold">My Notes </h2>
         <p className="regular-paragraph mt-8 max-w-[835px]">

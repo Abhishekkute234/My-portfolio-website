@@ -3,7 +3,11 @@ import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
 
 export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
+  return (
+    <section className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24">
+      <HeroParallax products={products} />
+    </section>
+  );
 }
 export const products = [
   {
