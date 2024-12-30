@@ -1,6 +1,5 @@
 import DotPattern from "../ui/dot-pattern";
-import FeedbackForm from "./ReviewCard";
-
+import { SignupFormDemo } from "./ReviewCard";
 const Reviews = () => {
   return (
     <section id="team" className="relative bg-black py-24">
@@ -8,7 +7,7 @@ const Reviews = () => {
         <h3 className="h3-bold">Feedback Form </h3>
       </div>
 
-      <FeedbackForm />
+      <SignupFormDemo />
 
       <DotPattern
         width={20}
