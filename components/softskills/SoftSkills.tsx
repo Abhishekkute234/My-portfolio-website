@@ -42,7 +42,7 @@ export function FeaturesSectionDemo() {
   return (
     <div className="relative z-20 mx-auto max-w-7xl py-10 lg:py-40">
       <div className="px-8">
-        <h4 className="mx-auto max-w-5xl text-center text-3xl font-medium tracking-tight text-black dark:text-white lg:text-5xl lg:leading-tight">
+        <h4 className="mx-auto max-w-5xl text-center text-3xl font-medium tracking-tight text-white dark:text-white lg:text-5xl lg:leading-tight">
           Packed with thousands of features
         </h4>
 
@@ -83,7 +83,7 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <p className=" mx-auto max-w-5xl text-left text-xl tracking-tight text-black dark:text-white md:text-2xl md:leading-snug">
+    <p className=" mx-auto max-w-5xl text-left text-xl tracking-tight text-white dark:text-white md:text-2xl md:leading-snug">
       {children}
     </p>
   );
