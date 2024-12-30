@@ -3,9 +3,9 @@ import Articles from "@/components/articles/Articles";
 import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import ProjectsSection from "@/components/projects/ProjectsSection";
-import Reviews from "@/components/review/Reviews";
-import { HeroParallaxDemo } from "@/components/softskills/SoftSkills";
 import Techs from "@/components/techs/Techs";
+import { FeaturesSectionDemo } from "@/components/softskills/SoftSkills";
+import Reviews from "@/components/review/Reviews";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Techs />
-      <HeroParallaxDemo />
+      <FeaturesSectionDemo />
       <ProjectsSection />
       <Articles />
       <Reviews />
