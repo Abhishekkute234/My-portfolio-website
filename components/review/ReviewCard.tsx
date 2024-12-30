@@ -1,104 +1,46 @@
-// components/FeedbackForm.js
-"use client";
-import { useState } from "react";
-
-const FeedbackForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    feedback: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-    // You can handle the form submission here (e.g., send it to an API).
-    alert("Thank you for your feedback!");
-    setFormData({ name: "", email: "", feedback: "" });
-  };
-
+import { AnimatedTestimonials } from "../ui/animated-testimonials";
+const testimonials = [
+  {
+    quote:
+      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    name: "Sarah Chen",
+    designation: "Product Manager at TechFlow",
+    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+    name: "Michael Rodriguez",
+    designation: "CTO at InnovateSphere",
+    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+    name: "Emily Watson",
+    designation: "Operations Director at CloudScale",
+    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+    name: "James Kim",
+    designation: "Engineering Lead at DataPro",
+    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+const ReviewCard = () => {
   return (
-    <div className="mx-auto w-full max-w-md rounded-none bg-black p-4 py-5 shadow-input dark:bg-black md:rounded-2xl md:p-8">
-      {" "}
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "15px" }}>
-          <label>
-            Name:
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              style={{
-                width: "100%",
-                padding: "10px",
-                marginTop: "5px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-              }}
-            />
-          </label>
-        </div>
-        <div style={{ marginBottom: "15px" }}>
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              style={{
-                width: "100%",
-                padding: "10px",
-                marginTop: "5px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-              }}
-            />
-          </label>
-        </div>
-        <div style={{ marginBottom: "15px" }}>
-          <label>
-            Feedback:
-            <textarea
-              name="feedback"
-              value={formData.feedback}
-              onChange={handleChange}
-              required
-              style={{
-                width: "100%",
-                padding: "10px",
-                marginTop: "5px",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-                minHeight: "100px",
-              }}
-            />
-          </label>
-        </div>
-        <button
-          type="submit"
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#0070f3",
-            color: "#fff",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
-          Submit
-        </button>
-      </form>
-    </div>
+    <section className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24">
+      <AnimatedTestimonials testimonials={testimonials} />
+    </section>
   );
 };
-
-export default FeedbackForm;
+export default ReviewCard;
