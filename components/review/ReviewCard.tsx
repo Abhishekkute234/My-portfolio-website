@@ -1,14 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
 
 export function SignupFormDemo() {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    setIsPopupVisible(true);
+    setTimeout(() => setIsPopupVisible(false), 3000); // Hide the popup after 3 seconds
   };
+
   return (
     <div className="mx-auto w-full max-w-md rounded-none bg-slate-300 px-4 py-8 shadow-input dark:bg-white md:rounded-2xl md:p-8">
       <form className="my-8" onSubmit={handleSubmit}>
@@ -44,6 +48,7 @@ export function SignupFormDemo() {
         </button>
         <div className="my-8 h-px w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
       </form>
+      {isPopupVisible && <ThankYouPopup />}
     </div>
   );
 }
@@ -67,6 +72,18 @@ const LabelInputContainer = ({
   return (
     <div className={cn("flex flex-col space-y-2 w-full", className)}>
       {children}
+    </div>
+  );
+};
+
+const ThankYouPopup = () => {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div className="rounded-lg bg-black px-6 py-4 shadow-lg">
+        <h2 className="text-center text-lg font-bold">
+          Thank you for your feedback!
+        </h2>
+      </div>
     </div>
   );
 };
