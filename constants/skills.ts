@@ -87,6 +87,26 @@ export const slugs = [
 
 export const techs = [
   {
+    label: 'C',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'C++',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'Python',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'Rust',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
     label: 'javascript',
     textColor: '#F7DF1E', // Brighter yellow
     bgColor: '#F0C800', // Darker yellow
@@ -97,25 +117,16 @@ export const techs = [
     bgColor: '#1E5D92', // Darker blue
   },
   {
-    label: 'react',
+    label: 'react.js',
     textColor: '#61DAFB', // Brighter light blue
     bgColor: '#4B9FC9', // Darker blue
   },
   {
-    label: 'next',
+    label: 'next.js',
     textColor: '#61DAFB', // Brighter light blue
     bgColor: '#4B9FC9', // Darker blue
   },
-  {
-    label: 'redux',
-    textColor: '#3168C6', // Brighter blue
-    bgColor: '#1E4D92', // Darker blue
-  },
-  {
-    label: 'tanstack',
-    textColor: '#3178f6', // Brighter blue
-    bgColor: '#1E5Df2', // Darker blue
-  },
+
   {
     label: 'css',
     textColor: '#38BDF8', // Brighter cyan
@@ -132,24 +143,79 @@ export const techs = [
     bgColor: '#0D8FB7', // Darker cyan
   },
   {
-    label: 'styled-components',
+    label: 'computer network ',
     textColor: '#DB7093', // Brighter pink
     bgColor: '#9B4F6C', // Darker pink
   },
   {
-    label: 'webpack',
+    label: 'Database management system ',
     textColor: '#DB7093', // Brighter pink
     bgColor: '#9B4F6C', // Darker pink
   },
   {
-    label: 'rollup',
+    label: 'Data structure and algorithm ',
     textColor: '#DB7093', // Brighter pink
     bgColor: '#9B4F6C', // Darker pink
   },
   {
-    label: 'node.js',
+    label: 'Data science',
     textColor: '#68A063', // Brighter green
     bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Data analyst',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Machine learning ',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Numpy',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Pandas',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Matplotlib',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Seaborn',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Sklearn',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+  {
+    label: 'Django',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'Flask',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'REST API',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'Appwriter',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
   },
   {
     label: 'mongodb',
@@ -157,25 +223,22 @@ export const techs = [
     bgColor: '#2C6A2F', // Darker green
   },
   {
+    label: 'SQL',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+  {
+    label: 'POstgrase',
+    textColor: '#38BDF8', // Brighter cyan
+    bgColor: '#0D8FB7', // Darker cyan
+  },
+
+  {
     label: 'express',
     textColor: '#000000', // Bright black (neutral)
     bgColor: '#333333', // Darker black (neutral)
   },
-  {
-    label: 'jest',
-    textColor: '#C03C44', // Brighter red
-    bgColor: '#9A1F28', // Darker red
-  },
-  {
-    label: 'vitest',
-    textColor: '#6A3B97', // Brighter purple
-    bgColor: '#4E2C6C', // Darker purple
-  },
-  {
-    label: 'ci/cd',
-    textColor: '#6A3B97', // Brighter purple
-    bgColor: '#4E2C6C', // Darker purple
-  },
+
   {
     label: 'git',
     textColor: '#6A3B97', // Brighter purple
@@ -187,10 +250,16 @@ export const techs = [
     bgColor: '#4E2C6C', // Darker purple
   },
   {
-    label: 'nx',
-    textColor: '#6A3B97', // Brighter purple
-    bgColor: '#4E2C6C', // Darker purple
+    label: 'Raspberry pi',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
   },
+  {
+    label: 'Ardiuno',
+    textColor: '#68A063', // Brighter green
+    bgColor: '#4E8B4A', // Darker green
+  },
+
   {
     label: 'and more...',
     textColor: '#6A3B97', // Brighter purple
