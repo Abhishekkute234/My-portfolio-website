@@ -9,6 +9,7 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
 } from "@tabler/icons-react";
+import React from "react";
 
 export function FeaturesSectionDemo() {
   const features = [
