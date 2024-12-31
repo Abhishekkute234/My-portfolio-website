@@ -4,7 +4,7 @@ import Image from "next/image";
 const About = () => {
   const data = [
     {
-      title: "2024",
+      title: "Freelancer at startup",
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
@@ -44,7 +44,7 @@ const About = () => {
       ),
     },
     {
-      title: " 2023",
+      title: " Inter at startup ",
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
