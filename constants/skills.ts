@@ -54,23 +54,35 @@ export const slugs = [
   'nodedotjs',
   'express',
   'nextdotjs',
-  'prisma',
-  'amazonaws',
+
   'postgresql',
   'firebase',
   'vercel',
-  'testinglibrary',
-  'jest',
-  'cypress',
+
   'docker',
   'git',
   'github',
-  'gitlab',
+
   'visualstudiocode',
   'figma',
-  'rubyonrails',
-  'ruby',
+
   'mongodb',
+  'rust',
+  'cplusplus',
+  'c',
+  'python',
+  'numpy',
+  'pandas',
+  'mat-plot-lib',
+  'sea-born',
+  'flask'
+  ,
+  'django',
+  'sklearn',
+  'raspberrypi',
+  'arduino',
+  'opencv',
+
 ];
 
 export const techs = [
