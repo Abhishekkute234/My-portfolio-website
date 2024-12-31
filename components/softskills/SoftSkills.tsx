@@ -1,85 +1,109 @@
-"use client";
+import { cn } from "@/lib/utils";
+import {
+  IconAdjustmentsBolt,
+  IconCloud,
+  IconCurrencyDollar,
+  IconEaseInOut,
+  IconHeart,
+  IconHelp,
+  IconRouteAltLeft,
+  IconTerminal2,
+} from "@tabler/icons-react";
 
-import Image from "next/image";
-import { Tabs } from "../ui/tabs";
-
-export function TabsDemo() {
-  const tabs = [
+export function FeaturesSectionDemo() {
+  const features = [
     {
-      title: "Product",
-      value: "product",
-      content: (
-        <div className="relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl">
-          <p>Product Tab</p>
-          <DummyContent />
-        </div>
-      ),
+      title: "Built for developers",
+      description:
+        "Built for engineers, developers, dreamers, thinkers and doers.",
+      icon: <IconTerminal2 />,
     },
     {
-      title: "Services",
-      value: "services",
-      content: (
-        <div className="relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl">
-          <p>Services tab</p>
-          <DummyContent />
-        </div>
-      ),
+      title: "Ease of use",
+      description:
+        "It's as easy as using an Apple, and as expensive as buying one.",
+      icon: <IconEaseInOut />,
     },
     {
-      title: "Playground",
-      value: "playground",
-      content: (
-        <div className="relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl">
-          <p>Playground tab</p>
-          <DummyContent />
-        </div>
-      ),
+      title: "Pricing like no other",
+      description:
+        "Our prices are best in the market. No cap, no lock, no credit card required.",
+      icon: <IconCurrencyDollar />,
     },
     {
-      title: "Content",
-      value: "content",
-      content: (
-        <div className="relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-700 to-violet-900 p-10 text-xl font-bold text-white md:text-4xl">
-          <p>Content tab</p>
-          <DummyContent />
-        </div>
-      ),
+      title: "100% Uptime guarantee",
+      description: "We just cannot be taken down by anyone.",
+      icon: <IconCloud />,
     },
     {
-      title: "Random",
-      value: "random",
-      content: (
-        <div className="relative size-full overflow-hidden rounded-2xl bg-gradient-to-br from-purple-300 to-violet-700 p-10 text-xl font-bold text-white md:text-4xl">
-          <p>Random tab</p>
-          <DummyContent />
-        </div>
-      ),
+      title: "Multi-tenant Architecture",
+      description: "You can simply share passwords instead of buying new seats",
+      icon: <IconRouteAltLeft />,
+    },
+    {
+      title: "24/7 Customer Support",
+      description:
+        "We are available a 100% of the time. Atleast our AI Agents are.",
+      icon: <IconHelp />,
+    },
+    {
+      title: "Money back guarantee",
+      description:
+        "If you donot like EveryAI, we will convince you to like us.",
+      icon: <IconAdjustmentsBolt />,
+    },
+    {
+      title: "And everything else",
+      description: "I just ran out of copy ideas. Accept my sincere apologies",
+      icon: <IconHeart />,
     },
   ];
-
   return (
-    <section
-      id="skills"
-      className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24"
-    >
-      <div className="z-10 flex flex-col px-6 py-10 md:items-center md:justify-center">
-        <h3 className="h2-bold">Soft skills </h3>
-      </div>
-      <div className="b relative mx-auto my-40 flex h-80 w-full max-w-5xl flex-col items-start  justify-start [perspective:1000px] md:h-[40rem]">
-        <Tabs tabs={tabs} />
-      </div>
-    </section>
+    <div className="relative z-10 mx-auto grid  max-w-7xl grid-cols-1 py-10 md:grid-cols-2 lg:grid-cols-4">
+      {features.map((feature, index) => (
+        <Feature key={feature.title} {...feature} index={index} />
+      ))}
+    </div>
   );
 }
 
-const DummyContent = () => {
+const Feature = ({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  index: number;
+}) => {
   return (
-    <Image
-      src="/linear.webp"
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="absolute inset-x-0 -bottom-10  mx-auto h-3/5 w-[90%] rounded-xl object-cover object-left-top md:h-[90%]"
-    />
+    <div
+      className={cn(
+        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
+        index < 4 && "lg:border-b dark:border-neutral-800"
+      )}
+    >
+      {index < 4 && (
+        <div className="pointer-events-none absolute inset-0 size-full bg-gradient-to-t from-neutral-100 to-transparent opacity-0 transition duration-200 group-hover/feature:opacity-100 dark:from-neutral-800" />
+      )}
+      {index >= 4 && (
+        <div className="pointer-events-none absolute inset-0 size-full bg-gradient-to-b from-neutral-100 to-transparent opacity-0 transition duration-200 group-hover/feature:opacity-100 dark:from-neutral-800" />
+      )}
+      <div className="relative z-10 mb-4 px-10 text-neutral-600 dark:text-neutral-400">
+        {icon}
+      </div>
+      <div className="relative z-10 mb-2 px-10 text-lg font-bold">
+        <div className="absolute inset-y-0 left-0 h-6 w-1 origin-center rounded-r-full bg-neutral-300 transition-all duration-200 group-hover/feature:h-8 group-hover/feature:bg-blue-500 dark:bg-neutral-700" />
+        <span className="inline-block text-neutral-800 transition duration-200 group-hover/feature:translate-x-2 dark:text-neutral-100">
+          {title}
+        </span>
+      </div>
+      <p className="relative z-10 max-w-xs px-10 text-sm text-neutral-600 dark:text-neutral-300">
+        {description}
+      </p>
+    </div>
   );
 };
