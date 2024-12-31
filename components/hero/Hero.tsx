@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="flex w-fit flex-col items-start gap-4">
             <div>
               <Link
-                href="https://www.linkedin.com/in/abhishek-kute-a85822257/"
+                href="https://drive.google.com/file/d/1xnILUBAI3PUBJbluLUVnK4-lBRt7dzVL/view?usp=drivesdk"
                 target="_blank"
               >
                 <AnimatedGradientText className="rounded-full px-5 py-2 text-lg hover:cursor-pointer">
