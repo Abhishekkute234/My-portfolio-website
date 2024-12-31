@@ -14,11 +14,11 @@ const NavLinks = () => {
       <Link className="py-4 md:py-0 md:hover:opacity-70" href="#projects">
         Projects
       </Link>
-      <Link className="py-4 md:py-0 md:hover:opacity-70" href="#team">
-        Team
-      </Link>
       <Link className="py-4 md:py-0 md:hover:opacity-70" href="#notes">
         Notes
+        <Link className="py-4 md:py-0 md:hover:opacity-70" href="#team">
+          Feedback
+        </Link>
       </Link>
     </nav>
   );
