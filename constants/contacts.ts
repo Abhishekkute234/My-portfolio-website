@@ -20,14 +20,21 @@ export const contacts = [
     description: 'Feel free to reach out to me directly via email.',
     path: 'mailto:kuteabhishek2004@gmail.com',
   },
+  {
+    id: 'resume',
+    title: 'Resume',
+    icon: '/resume.svg',
+    description: 'Check my resume to know more about me',
+    path: 'https://drive.google.com/file/d/1xnILUBAI3PUBJbluLUVnK4-lBRt7dzVL/view?usp=drivesdk',
+  },
 ];
 
 export const socialLinks = [
   {
     id: 'resume',
     icon: '/resume.svg',
-    alt: "Link to Adel's resume",
-    path: 'https://drive.google.com/file/d/1YiBWrY2cMZRaHtbeiHZSjYpizlhXqgEr/view?usp=sharing',
+    alt: "Link to abhi's resume",
+    path: 'https://drive.google.com/file/d/1xnILUBAI3PUBJbluLUVnK4-lBRt7dzVL/view?usp=drivesdk',
   },
   {
     id: 'github',
