@@ -5,7 +5,6 @@ import Hero from "@/components/hero/Hero";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import Techs from "@/components/techs/Techs";
 import { FeaturesSectionDemo } from "@/components/softskills/SoftSkills";
-import Reviews from "@/components/review/Reviews";
 
 export default function Home() {
   return (
@@ -16,7 +15,7 @@ export default function Home() {
       <FeaturesSectionDemo />
       <ProjectsSection />
       <Articles />
-      <Reviews />
+
       <Contact />
     </>
   );

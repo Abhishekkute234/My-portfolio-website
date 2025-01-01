@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils";
-import AnimatedGradientText from "../ui/animated-gradient-text";
+"use client";
+
 import AnimatedGridPattern from "../ui/animated-grid-pattern";
-import Link from "next/link";
 import { FlipWords } from "../ui/flip-words";
 import { WavyBackground } from "../ui/wavy-background";
 import React from "react";
+import IdeaForm from "../ui/idea-form";
 
 const words = [
   "SDE intern ",
@@ -33,21 +33,15 @@ const Hero = () => {
         <div className="mt-12 flex flex-col-reverse gap-8 md:flex-row md:justify-center md:gap-20 lg:gap-32">
           <div className="flex w-fit flex-col items-start gap-4">
             <div>
-              <Link
-                href="https://drive.google.com/file/d/1xnILUBAI3PUBJbluLUVnK4-lBRt7dzVL/view?usp=drivesdk"
-                target="_blank"
-              >
-                <AnimatedGradientText className="rounded-full px-5 py-2 text-lg hover:cursor-pointer">
-                  📃 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-400" />{" "}
-                  <span
-                    className={cn(
-                      `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
-                    )}
-                  >
-                    My Resume
-                  </span>
-                </AnimatedGradientText>
-              </Link>
+              <IdeaForm
+                buttonText="Share your thoughts"
+                maxChars={500}
+                placeholders={["What's on your mind?", "Any bright ideas?"]}
+                backgroundColor="bg-white dark:bg-white"
+                textColor="text-black dark:text-black"
+                accentColor="bg-yellow-400"
+                onLog={(idea) => console.log("Logged idea:", idea)}
+              />
             </div>
           </div>
         </div>
