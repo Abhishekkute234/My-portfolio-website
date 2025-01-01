@@ -7,7 +7,7 @@ const About = () => {
       title: "Freelancer at startup",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
+          <p className="mb-8 text-xs font-normal text-neutral-100 dark:text-neutral-200 md:text-sm">
             Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -44,14 +44,14 @@ const About = () => {
       ),
     },
     {
-      title: " Inter at startup ",
+      title: " Intern at startup ",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
+          <p className="mb-8 text-xs font-normal text-neutral-100 dark:text-neutral-200 md:text-sm">
             I usually run out of copy, but when I see content this big, I try to
             integrate lorem ipsum.
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
+          <p className="mb-8 text-xs font-normal text-neutral-100 dark:text-neutral-200 md:text-sm">
             Lorem ipsum is for people who are too lazy to write copy. But we are
             not. Here are some more example of beautiful designs I built.
           </p>
@@ -78,23 +78,23 @@ const About = () => {
       title: "Hackathons",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-800 dark:text-neutral-200 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-neutral-100 dark:text-neutral-200 md:text-sm">
             Deployed 5 new components on Aceternity today
           </p>
           <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
+            <div className="flex items-center gap-2 text-xs text-neutral-100 dark:text-neutral-300 md:text-sm">
               ✅ Card grid component
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
+            <div className="flex items-center gap-2 text-xs text-neutral-100 dark:text-neutral-300 md:text-sm">
               ✅ Startup template Aceternity
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
+            <div className="flex items-center gap-2 text-xs text-neutral-100 dark:text-neutral-300 md:text-sm">
               ✅ Random file upload lol
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
+            <div className="flex items-center gap-2 text-xs text-neutral-100 dark:text-neutral-300 md:text-sm">
               ✅ Himesh Reshammiya Music CD
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 md:text-sm">
+            <div className="flex items-center gap-2 text-xs text-neutral-100 dark:text-neutral-300 md:text-sm">
               ✅ Salman Bhai Fan Club registrations open
             </div>
           </div>
