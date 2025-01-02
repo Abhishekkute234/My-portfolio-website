@@ -48,6 +48,21 @@ const NavIcons = () => {
         </span>
       </Link>
       <Link
+        href="https://www.geeksforgeeks.org/user/abhishek_kute_234/"
+        className="group flex items-center justify-center gap-x-1.5"
+        target="_blank"
+      >
+        <Image
+          src="/gfg.svg"
+          alt="Link to abhi's dsa profile  profile"
+          width={28}
+          height={28}
+        />
+        <span className="hidden text-xs text-white opacity-50 transition group-hover:opacity-100 md:inline">
+          GFG
+        </span>
+      </Link>
+      <Link
         href="https://drive.google.com/file/d/1xnILUBAI3PUBJbluLUVnK4-lBRt7dzVL/view?usp=drivesdk"
         className="group flex items-center justify-center gap-x-1.5"
         target="_blank"

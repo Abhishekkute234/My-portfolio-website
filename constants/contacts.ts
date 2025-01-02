@@ -56,5 +56,12 @@ export const socialLinks = [
     description: "Let's connect and explore opportunities together.",
     path: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
   },
+  {
+    id: 'gfg',
+    title: 'gfg',
+    icon: '/gfg.svg',
+    description: "Let's connect and explore opportunities together.",
+    path: 'https://www.geeksforgeeks.org/user/abhishek_kute_234/',
+  },
 
 ];
