@@ -15,6 +15,18 @@ const words = [
 ];
 
 const Hero = () => {
+  // const handleGoogleSignIn = async () => {
+  //   const provider = new GoogleAuthProvider();
+  //   try {
+  //     const result = await signInWithPopup(auth, provider);
+  //     const user = result.user;
+  //     console.log("User Info:", user);
+  //     alert(`Welcome ${user.displayName}`);
+  //   } catch (error: any) {
+  //     console.error("Error during sign-in:", error.message);
+  //     alert("Google sign-in failed. Please try again.");
+  //   }
+  // };
   return (
     <WavyBackground className="mx-auto max-w-4xl pb-40">
       <section className="relative px-6" style={{ contain: "layout" }}>
@@ -22,7 +34,6 @@ const Hero = () => {
           <h1 className="h1-bold flex flex-col items-start md:items-center">
             <span>Welcome</span>
             <span>to my </span>
-
             <span>Portfolio website </span>
             <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
               <FlipWords words={words} /> <br />
@@ -46,6 +57,7 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Background Animation */}
         <div className="pointer-events-none absolute top-0 -z-20 size-full overflow-hidden opacity-50 [mask-image:radial-gradient(900px_circle_at_top,#000,transparent)]">
           <AnimatedGridPattern
             numSquares={120}
@@ -68,4 +80,5 @@ const Hero = () => {
     </WavyBackground>
   );
 };
+
 export default Hero;

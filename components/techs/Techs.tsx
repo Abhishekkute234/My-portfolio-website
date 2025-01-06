@@ -2,7 +2,6 @@ import { slugs, techs } from "@/constants/skills";
 import DotPattern from "../ui/dot-pattern";
 import IconCloud from "../ui/icon-cloud";
 import TechTag from "./TechTag";
-import PixelCards from "../ui/pixel-card";
 
 const Techs = () => {
   return (
@@ -45,8 +44,6 @@ const Techs = () => {
         cr={1}
         className="dot-pattern bottom-0 border  opacity-50"
       />
-
-      <PixelCards />
     </section>
   );
 };
