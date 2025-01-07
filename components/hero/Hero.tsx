@@ -4,7 +4,6 @@ import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import { FlipWords } from "../ui/flip-words";
 import { WavyBackground } from "../ui/wavy-background";
 import React from "react";
-import IdeaForm from "../ui/idea-form";
 
 const words = [
   "SDE intern ",
@@ -39,22 +38,6 @@ const Hero = () => {
               <FlipWords words={words} /> <br />
             </div>
           </h1>
-        </div>
-
-        <div className="mt-12 flex flex-col-reverse gap-8 md:flex-row md:justify-center md:gap-20 lg:gap-32">
-          <div className="flex w-fit flex-col items-start gap-4">
-            <div>
-              <IdeaForm
-                buttonText="Share your thoughts"
-                maxChars={500}
-                placeholders={["What's on your mind?", "Any bright ideas?"]}
-                backgroundColor="bg-white dark:bg-white"
-                textColor="text-black dark:text-black"
-                accentColor="bg-yellow-400"
-                onLog={(idea) => console.log("Logged idea:", idea)}
-              />
-            </div>
-          </div>
         </div>
 
         {/* Background Animation */}

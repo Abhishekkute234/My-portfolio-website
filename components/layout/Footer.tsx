@@ -1,5 +1,4 @@
 "use client";
-
 import { WorldMap } from "../ui/world-map";
 
 const Footer = () => {
