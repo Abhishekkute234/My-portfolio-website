@@ -16,6 +16,9 @@ const NavLinks = () => {
       <Link className="py-4 md:py-0 md:hover:opacity-70" href="#notes">
         Notes
       </Link>
+      <Link className="py-4 md:py-0 md:hover:opacity-70" href="#contact">
+        Contact me
+      </Link>
     </nav>
   );
 };

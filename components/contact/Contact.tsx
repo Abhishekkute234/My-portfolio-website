@@ -5,8 +5,12 @@ import Contactusform from "../layout/Contactus";
 
 const Contact = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24">
-      <h4 className="h3-bold md:mx-auto md:max-w-[850px] md:text-center">
+    <section
+      id="contact"
+      className="relative flex flex-col items-center justify-center  overflow-hidden  bg-black px-6 py-24"
+    >
+      <h2 className="h2-bold my-11">Contact me</h2>
+      <h4 className="h3-bold my-8 md:mx-auto md:max-w-[850px] md:text-center">
         Let&apos;s create something exceptional together! Feel free to reach out
         for collaboration, freelance work, or just to say hi!
       </h4>
@@ -22,7 +26,7 @@ const Contact = () => {
           />
         ))}
       </div>
-      <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
+      <div className="mx-auto my-8 text-4xl font-normal text-neutral-100 dark:text-neutral-100">
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"
