@@ -180,7 +180,7 @@ const Contactusform = () => {
                       <button
                         type="submit"
                         disabled={isDisabled}
-                        className="bg-purple hover:bg-primary-800 focus:ring-primary-300 w-full rounded-lg px-5 py-3 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 disabled:opacity-50"
+                        className="bg-purple hover:bg-primary-800 focus:ring-primary-300 w-full rounded-lg px-5 py-3 text-center text-sm font-medium text-black focus:outline-none focus:ring-4 disabled:opacity-50"
                       >
                         {isSubmitting ? "Sending..." : "Send message"}
                       </button>
