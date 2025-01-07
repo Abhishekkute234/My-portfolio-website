@@ -1,10 +1,10 @@
 "use client";
-
 import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import { FlipWords } from "../ui/flip-words";
 import { WavyBackground } from "../ui/wavy-background";
 import React from "react";
 import Contactusform from "../layout/Contactus";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 const words = [
   "SDE intern ",
@@ -36,8 +36,14 @@ const Hero = () => {
             <span>to my </span>
             <span>Portfolio website </span>
             <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
-              <FlipWords words={words} /> <br />
-              <Contactusform />
+              <FlipWords className="py-5" words={words} /> <br />
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="flex flex-col items-center justify-center bg-black font-bold text-white dark:bg-black dark:text-white"
+              >
+                <Contactusform />
+              </HoverBorderGradient>
             </div>
           </h1>
         </div>

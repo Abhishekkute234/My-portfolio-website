@@ -63,23 +63,23 @@ const Contactusform = () => {
 
   return (
     <>
-      <div className="inset-y-0 right-0 flex items-center  sm:static sm:inset-auto sm:pr-0 md:ml-6">
-        <div className="md:hidden">
+      <div className=" sm:static sm:inset-auto sm:pr-0 md:ml-6">
+        <div className="  md:hidden">
           <button
             type="button"
             className="text-15px font-medium"
             onClick={() => setIsOpen(true)}
           >
-            Contact Us
+            <span className=" mr-12">Contact Us</span>
           </button>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block  ">
           <button
             type="button"
             className="text-15px space-links font-medium"
             onClick={() => setIsOpen(true)}
           >
-            Contact Us
+            <span className=" mr-12">Contact Us</span>
           </button>
         </div>
       </div>
