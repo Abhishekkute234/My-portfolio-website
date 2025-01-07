@@ -1,5 +1,7 @@
 import { contacts } from "@/constants/contacts";
 import ContactCard from "./ContactCard";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import Contactusform from "../layout/Contactus";
 
 const Contact = () => {
   return (
@@ -19,6 +21,15 @@ const Contact = () => {
             path={contact.path}
           />
         ))}
+      </div>
+      <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="button"
+          className="flex flex-col items-center justify-center bg-black font-bold text-white dark:bg-black dark:text-white"
+        >
+          <Contactusform />
+        </HoverBorderGradient>
       </div>
     </section>
   );
