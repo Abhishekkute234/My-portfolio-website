@@ -4,6 +4,7 @@ import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import Techs from "@/components/techs/Techs";
+import Contactusform from "@/components/layout/Contactus";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Techs />
       <ProjectsSection />
       <Articles />
-
+      <Contactusform />
       <Contact />
     </>
   );

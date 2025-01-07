@@ -4,6 +4,7 @@ import AnimatedGridPattern from "../ui/animated-grid-pattern";
 import { FlipWords } from "../ui/flip-words";
 import { WavyBackground } from "../ui/wavy-background";
 import React from "react";
+import Contactusform from "../layout/Contactus";
 
 const words = [
   "SDE intern ",
@@ -36,6 +37,7 @@ const Hero = () => {
             <span>Portfolio website </span>
             <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
               <FlipWords words={words} /> <br />
+              <Contactusform />
             </div>
           </h1>
         </div>

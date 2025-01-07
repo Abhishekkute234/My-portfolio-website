@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Contactusform from "./Contactus";
 const NavLinks = () => {
   return (
     <nav className="mt-16 flex flex-col gap-8 font-Silkscreen text-3xl md:mt-0 md:flex-row md:text-sm">
@@ -17,8 +16,6 @@ const NavLinks = () => {
       <Link className="py-4 md:py-0 md:hover:opacity-70" href="#notes">
         Notes
       </Link>
-
-      <Contactusform />
     </nav>
   );
 };
