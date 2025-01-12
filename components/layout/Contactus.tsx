@@ -70,7 +70,7 @@ const Contactusform = () => {
             className="text-15px font-medium"
             onClick={() => setIsOpen(true)}
           >
-            <span className=" mr-12">Contact Us</span>
+            Contact Us
           </button>
         </div>
         <div className="hidden md:block  ">
@@ -79,7 +79,10 @@ const Contactusform = () => {
             className="text-15px space-links font-medium"
             onClick={() => setIsOpen(true)}
           >
-            <span className=" mr-12">Contact Us</span>
+            <span className=" mr-12">
+
+            Contact Us
+            </span>
           </button>
         </div>
       </div>
