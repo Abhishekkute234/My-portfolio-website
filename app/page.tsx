@@ -4,7 +4,7 @@ import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import ProjectsSection from "@/components/projects/ProjectsSection";
 import Techs from "@/components/techs/Techs";
-import AllGames from "@/components/layout/AllGames";
+import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Home() {
       <Articles />
 
       <Contact />
-      <AllGames />
+      <Footer />
     </>
   );
 }

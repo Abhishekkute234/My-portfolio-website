@@ -136,7 +136,7 @@ const SnakeGame = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-black">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-black py-48">
       <Card className="w-full max-w-lg rounded-xl border border-zinc-800 bg-zinc-900/90 p-6 shadow-2xl">
         <CardHeader className="text-center">
           <div className="mb-2 flex items-center justify-center gap-2">
