@@ -2,6 +2,8 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface ContactFormData {
   name: string;
@@ -67,22 +69,19 @@ const Contactusform = () => {
         <div className="  md:hidden">
           <button
             type="button"
-            className="text-15px font-medium"
+            className="text-10px font-bold"
             onClick={() => setIsOpen(true)}
           >
-            Contact Us
+            Contact-us
           </button>
         </div>
         <div className="hidden md:block  ">
           <button
             type="button"
-            className="text-15px space-links font-medium"
+            className="text-10px space-links font-bold"
             onClick={() => setIsOpen(true)}
           >
-            <span className=" mr-12">
-
-            Contact Us
-            </span>
+            <span className=" mr-12">Contact-us</span>
           </button>
         </div>
       </div>

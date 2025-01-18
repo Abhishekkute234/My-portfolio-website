@@ -4,8 +4,8 @@ import { FlipWords } from "../ui/flip-words";
 import { WavyBackground } from "../ui/wavy-background";
 import React from "react";
 import Contactusform from "../layout/Contactus";
-import { HoverBorderGradient } from "../ui/hover-border-gradient";
-
+import Link from "next/link";
+import Image from "next/image";
 const words = [
   "SDE intern ",
   "Freelancer ",
@@ -37,15 +37,34 @@ const Hero = () => {
             <span>Portfolio website </span>
             <div className="mx-auto text-4xl font-normal text-neutral-100 dark:text-neutral-100">
               <FlipWords className="py-5" words={words} /> <br />
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="flex flex-col items-center justify-center bg-black font-bold text-white dark:bg-black dark:text-white"
-              >
-                <Contactusform />
-              </HoverBorderGradient>
             </div>
           </h1>
+          <div className="flex justify-center gap-x-10">
+            <button className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
+              <div className="group relative  rounded-[6px] bg-black  px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <Contactusform />
+              </div>
+            </button>
+            <button className="relative p-[3px]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />
+              <div className="group relative  rounded-[6px] bg-black  px-8 py-2 text-white transition duration-200 hover:bg-transparent">
+                <Link
+                  href="https://drive.google.com/file/d/1xnILUBAI3PUBJbluLUVnK4-lBRt7dzVL/view?usp=drivesdk"
+                  className="group flex items-center justify-center gap-x-1.5"
+                  target="_blank"
+                >
+                  <Image
+                    src="/resume.svg"
+                    alt="Link to abhi's resume profile"
+                    width={28}
+                    height={28}
+                  />
+                  <h1 className="text-10px font-bold">Resume</h1>
+                </Link>
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Background Animation */}
