@@ -13,7 +13,6 @@ export default function Home() {
       <Techs />
       <ProjectsSection />
       <Articles />
-
       <Contact />
       <Footer />
     </>
