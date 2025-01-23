@@ -1,11 +1,12 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 
+import ContactUs from '@/components/ConatctUs/contactus';
 import {
   ExternalLink,
   FigmaIcon,
   GitHubIcon,
-  TwitterIcon,
+  YoutubeIcon,
 } from '@/components/Icons';
 
 import dayjs from '@/utils/dayjs';
@@ -13,7 +14,7 @@ import dayjs from '@/utils/dayjs';
 function LastUpdate() {
   return (
     <a
-      href="https://github.com/enjidev/enji.dev"
+      href="https://github.com/Abhishekkute234"
       target="_blank"
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
@@ -112,20 +113,20 @@ function FooterDescription() {
         About Me
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        I&apos;m Enji, a <strong>front-end developer</strong> who loves
+        I&apos;m Abhishek, a <strong>Software developer</strong> who loves
         intuitive, clean and modern UI design.
       </p>
       <ul className={clsx('-ml-2 flex gap-1')}>
         <li>
           <a
-            href="https://twitter.com/enjidev"
+            href="https://www.youtube.com/@keep_it_sorted"
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
             aria-label="My Twitter profile"
             title="My Twitter profile"
           >
-            <TwitterIcon className={clsx('h-5 w-5')} />
+            <YoutubeIcon className={clsx('h-5 w-5')} />
           </a>
         </li>
         <li>
@@ -238,6 +239,9 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center">
+          <ContactUs />
+        </div>
         <div
           className={clsx(
             'border-divider-light flex justify-between border-t py-6 text-xs',
@@ -245,7 +249,7 @@ function Footer() {
           )}
         >
           <div className={clsx('font-semibold')}>
-            &copy; {dayjs().format('YYYY')}, Enji Kusnadi
+            &copy; {dayjs().format('YYYY')},Abhishek Kute
           </div>
           <div className={clsx('text-slate-500', 'dark:text-slate-400')}>
             <LastUpdate />
