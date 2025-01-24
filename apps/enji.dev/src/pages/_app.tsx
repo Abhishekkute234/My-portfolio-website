@@ -1,7 +1,9 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { useEffect, useState } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
+import Preloader from '@/components/Loder/Preloader';
 import Provider from '@/providers';
 
 import type { NextPage } from 'next';
@@ -23,6 +25,17 @@ function getDefaultLayout(page: ReactElement): ReactNode {
 }
 
 function App({ Component, pageProps, router }: AppPropsWithLayout) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Logic to stop the preloader after 4 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 4000);
+
+    return () => clearTimeout(timer); // Clean up the timer
+  }, []);
+
   let getLayout;
 
   if (router.query.simpleLayout) {
@@ -35,11 +48,17 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
 
   return (
     <Provider>
-      <RootLayout>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        {getLayout(<Component {...pageProps} />)}
-        <GoogleAnalytics gaId="G-FB9QLDNKNN" />
-      </RootLayout>
+      {isLoading ? (
+        // Show Preloader while loading
+        <Preloader onDone={() => setIsLoading(false)} />
+      ) : (
+        // Show the main layout after loading
+        <RootLayout>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          {getLayout(<Component {...pageProps} />)}
+          <GoogleAnalytics gaId="G-FB9QLDNKNN" />
+        </RootLayout>
+      )}
     </Provider>
   );
 }
