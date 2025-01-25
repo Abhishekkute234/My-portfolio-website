@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Preloader = ({ onDone }) => {
@@ -6,7 +6,7 @@ const Preloader = ({ onDone }) => {
     // Trigger the `onDone` callback after 4 seconds
     const timer = setTimeout(() => {
       onDone();
-    }, 3000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, [onDone]);
 
@@ -17,11 +17,11 @@ const Preloader = ({ onDone }) => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: '#C5BAFF',
+        backgroundColor: '#0C1222',
       }}
     >
       <DotLottieReact
-        src="https://lottie.host/a50f7f46-6856-4e37-b409-c04dda899aa7/IHBP3plygy.lottie"
+        src="https://lottie.host/7f977d54-5431-43ad-9466-a23c9613fe35/JBCzu5o3Tp.lottie"
         loop
         autoplay
       />
