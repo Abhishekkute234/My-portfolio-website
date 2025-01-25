@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
-import Preloader from '@/components/Loder/Preloader';
+import Preloader from '@/components/Loder/Preloader_1';
 import Provider from '@/providers';
 
 import type { NextPage } from 'next';

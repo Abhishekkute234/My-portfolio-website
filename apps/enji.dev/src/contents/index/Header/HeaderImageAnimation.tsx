@@ -99,3 +99,21 @@ function HeaderImageAnimation({
 }
 
 export default HeaderImageAnimation;
+
+// import Preloader from '@/components/Loder/Preloader';
+
+// interface HeaderImageAnimationProps {
+//   onAnimationComplete?: () => void;
+// }
+
+// function HeaderImageAnimation({
+//   onAnimationComplete = () => {},
+// }: HeaderImageAnimationProps) {
+//   return (
+//     <div className="flex flex-col items-center justify-center">
+//       <Preloader onDone={onAnimationComplete} />
+//     </div>
+//   );
+// }
+
+// export default HeaderImageAnimation;
