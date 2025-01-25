@@ -21,7 +21,7 @@ const Preloader = ({ onDone }) => {
       }}
     >
       <DotLottieReact
-        src="https://lottie.host/04f7d108-1616-47e0-8724-647ab8280492/chZaD0EF17.lottie"
+        src="https://lottie.host/a50f7f46-6856-4e37-b409-c04dda899aa7/IHBP3plygy.lottie"
         loop
         autoplay
       />
