@@ -1,4 +1,5 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { useEffect, useState } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
@@ -54,6 +55,7 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
       ) : (
         // Show the main layout after loading
         <RootLayout>
+          <SpeedInsights />
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           {getLayout(<Component {...pageProps} />)}
           <GoogleAnalytics gaId="G-FB9QLDNKNN" />
