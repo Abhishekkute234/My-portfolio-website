@@ -1,88 +1,55 @@
-import clsx from 'clsx';
-import { useState } from 'react';
+import { HoverEffect } from '@/components/ui/card-hover-effect';
 
-import { GitHubIcon, NpmIcon } from '@/components/Icons';
-import { SectionButton } from '@/components/sections/SectionButton';
-import SectionContent from '@/components/sections/SectionContent';
-import SectionTitle from '@/components/sections/SectionTitle';
-import AppWindow from '@/components/wireframes/AppWindow';
-import GitHubWireframe from '@/components/wireframes/GitHub';
-import NpmWireframe from '@/components/wireframes/Npm';
+export const projects = [
+  {
+    title: 'Stripe',
+    description:
+      'A technology company that builds economic infrastructure for the internet.',
+    link: 'https://stripe.com',
+    imageSrc: '/assets/images/me.png',
+  },
+  {
+    title: 'Netflix',
+    description:
+      'A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.',
+    link: 'https://netflix.com',
+    imageSrc: '/path/to/netflix-image.jpg',
+  },
+  {
+    title: 'Google',
+    description:
+      'A multinational technology company that specializes in Internet-related services and products.',
+    link: 'https://google.com',
+  },
+  {
+    title: 'Meta',
+    description:
+      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+    link: 'https://meta.com',
+  },
+  {
+    title: 'Amazon',
+    description:
+      'A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.',
+    link: 'https://amazon.com',
+  },
+  {
+    title: 'Microsoft',
+    description:
+      'A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.',
+    link: 'https://microsoft.com',
+  },
+];
 
 function ProjectsContents() {
-  const [currentState, setCurrentState] = useState<'npm' | 'github'>('github');
-
   return (
-    <>
-      <SectionTitle
-        title="The dynamic accent colors."
-        caption="tailwindcss-accent"
-        description="Add accent colors for dynamic, flexible color use in your Tailwind CSS project."
-        button={{
-          title: 'learn more',
-          href: '/docs/tailwindcss-accent',
-        }}
+    <div className="mx-auto max-w-5xl px-8">
+      <HoverEffect
+        items={projects}
+        className="your-custom-class"
+        imageSrc="/path/to/your/image.jpg"
       />
-      <SectionContent>
-        <div className={clsx('flex', 'lg:gap-12')}>
-          <div className={clsx('hidden flex-1 flex-col gap-3 pt-8', 'lg:flex')}>
-            <div className={clsx('flex flex-col gap-3')}>
-              <SectionButton
-                title="Available on GitHub"
-                icon={<GitHubIcon className={clsx('my-2 h-16 w-16')} />}
-                description="Access powerful and flexible package on GitHub with MIT license."
-                active={currentState === 'github'}
-                onClick={() => setCurrentState('github')}
-              />
-              <SectionButton
-                title="npm package"
-                icon={<NpmIcon className={clsx('my-2 h-16 w-16')} />}
-                description="Install and use the package with ease thanks to its typed options."
-                active={currentState === 'npm'}
-                onClick={() => setCurrentState('npm')}
-              />
-            </div>
-          </div>
-          <div className={clsx('w-full', 'lg:w-auto')}>
-            <div className={clsx('-mt-[41px]')}>
-              <div className={clsx('w-full', 'lg:h-[400px] lg:w-[600px]')}>
-                <AppWindow
-                  type="browser"
-                  browserTabs={[
-                    {
-                      icon: <GitHubIcon className="h-4 w-4" />,
-                      title: 'enjidev/tailwindcss-accent - GitHub',
-                      isActive: currentState === 'github',
-                    },
-                    {
-                      icon: <NpmIcon className="h-4 w-4" />,
-                      title: 'tailwindcss-accent - npm',
-                      isActive: currentState === 'npm',
-                    },
-                  ]}
-                >
-                  {currentState === 'github' && (
-                    <GitHubWireframe
-                      author="enjidev"
-                      license="MIT"
-                      repository="tailwindcss-accent"
-                      description="Adds accent colors for more dynamic and flexible color utilization."
-                    />
-                  )}
-                  {currentState === 'npm' && (
-                    <NpmWireframe
-                      packageName="tailwindcss-accent"
-                      description="Adds accent colors for more dynamic and flexible color utilization."
-                      isWithTypeScript
-                    />
-                  )}
-                </AppWindow>
-              </div>
-            </div>
-          </div>
-        </div>
-      </SectionContent>
-    </>
+    </div>
   );
 }
 
