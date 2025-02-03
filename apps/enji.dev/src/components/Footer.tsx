@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 
-import ContactUs from '@/components/ConatctUs/contactus';
+// import ContactUs from '@/components/ConatctUs/contactus';
 import {
   ExternalLink,
   FigmaIcon,
@@ -239,9 +239,9 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <ContactUs />
-        </div>
+        </div> */}
         <div
           className={clsx(
             'border-divider-light flex justify-between border-t py-6 text-xs',
