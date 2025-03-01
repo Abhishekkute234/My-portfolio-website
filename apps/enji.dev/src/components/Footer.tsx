@@ -210,7 +210,7 @@ function Footer() {
                     {
                       title: 'T.I.L',
                       href: '/today-i-learned',
-                      label: 'new',
+                      label: 'soon',
                     },
                   ]}
                 />
@@ -219,11 +219,6 @@ function Footer() {
                 <FooterGroup
                   title="This Site"
                   links={[
-                    {
-                      title: 'Design Concept',
-                      href: 'https://www.figma.com/community/file/1176392613303840973',
-                      isInternal: false,
-                    },
                     {
                       title: 'Source Code',
                       href: 'https://github.com/Abhishekkute234',
