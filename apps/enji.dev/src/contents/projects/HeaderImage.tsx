@@ -40,35 +40,6 @@ function Projects() {
         variants={animation}
         custom={1}
       />
-      <m.rect
-        x="341.105"
-        y="421.087"
-        width="122"
-        height="358"
-        rx="61"
-        transform="rotate(135 341.105 421.087)"
-        variants={animation}
-        custom={2}
-      />
-      <m.rect
-        y="1.41421"
-        width="122"
-        height="358"
-        rx="61"
-        transform="matrix(-0.707107 0.707107 0.707107 0.707107 374.96 111.414)"
-        variants={animation}
-        custom={3}
-      />
-      <m.rect
-        x="1.41421"
-        y="-1.19209e-07"
-        width="122"
-        height="358"
-        rx="61"
-        transform="matrix(0.707107 0.707107 0.707107 -0.707107 288.414 531.087)"
-        variants={animation}
-        custom={4}
-      />
     </m.svg>
   );
 }

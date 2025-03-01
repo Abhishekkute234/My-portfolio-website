@@ -6,7 +6,7 @@ const Preloader = ({ onDone }) => {
     // Trigger the `onDone` callback after 4 seconds
     const timer = setTimeout(() => {
       onDone();
-    }, 2250);
+    }, 2750);
     return () => clearTimeout(timer);
   }, [onDone]);
 
@@ -21,7 +21,7 @@ const Preloader = ({ onDone }) => {
       }}
     >
       <DotLottieReact
-        src="https://lottie.host/7f977d54-5431-43ad-9466-a23c9613fe35/JBCzu5o3Tp.lottie"
+        src="https://lottie.host/50a856c6-1ba7-4aa3-8ed1-cfc6bd65adc0/sl0HuC2AJY.lottie"
         loop
         autoplay
       />

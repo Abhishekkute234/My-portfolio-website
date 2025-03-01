@@ -4,8 +4,8 @@ import Link from 'next/link';
 // import ContactUs from '@/components/ConatctUs/contactus';
 import {
   ExternalLink,
-  FigmaIcon,
   GitHubIcon,
+  LinkedInIcon,
   YoutubeIcon,
 } from '@/components/Icons';
 
@@ -143,14 +143,14 @@ function FooterDescription() {
         </li>
         <li>
           <a
-            href="https://figma.com/@enjidev"
+            href="https://www.linkedin.com/in/abhishek-kute-a85822257/"
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
-            aria-label="My Figma profile"
+            aria-label="My linkedin profile"
             title="My Figma profile"
           >
-            <FigmaIcon className={clsx('h-5 w-5')} />
+            <LinkedInIcon className={clsx('h-5 w-5')} />
           </a>
         </li>
       </ul>

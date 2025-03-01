@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 
 // Remove unused imports if not needed
 // import { HoverEffect } from '@/components/ui/card-hover-effect';
@@ -20,85 +19,208 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Stripe',
+    title: 'Imagin Gifts ',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'A Freelance next.js  website for a client who wanted a simple website to showcase his work and services.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/imaginegifts.jpg',
+    github:
+      'https://github.com/Abhishekkute234/Finalecom-main-using-next.js.git',
+    livelink: 'https://www.imaginggifts.com/',
   },
   {
-    title: 'Stripe',
+    title: 'Standard Store',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'A complete MERN stack application that allows users to create an account, login, and add products to their cart.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/standardstore.png',
+    github:
+      'https://github.com/Abhishekkute234/Restaurant-authentication-system-using-MERN-staxk.git',
+    livelink: 'https://standardstore.in/',
   },
   {
-    title: 'Stripe',
+    title: 'Portfolio Website',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'The Next js website to showcase my work and services. The website is built using Next js and Tailwind CSS.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/portfolio.png',
+    github: 'https://github.com/Abhishekkute234/My-portfolio-website',
+    livelink: 'https://my-portfolio-website-pied-two.vercel.app/',
   },
   {
-    title: 'Stripe',
+    title: 'The Digital scroll',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'A Next js website to showcase the work of a digital artist. The website is built using Next js and Tailwind CSS.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/digitalscroll.png',
+    github: 'https://github.com/Abhishekkute234/The-Digital-Scroll.git',
+    livelink: 'https://the-digital-scroll.vercel.app/',
   },
   {
-    title: 'Stripe',
+    title: 'Client Agency website',
     description:
       'A technology company that builds economic infrastructure for the internet.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/image.png',
+    github: 'https://github.com/Abhishekkute234/',
+    livelink: 'https://client-agency-webite-21qx.vercel.app/',
   },
   {
-    title: 'Stripe',
+    title: 'Next js Dashboard ',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'An UI dashboard built using Next js and Tailwind CSS. The dashboard is used to display data and statistics.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/dashboard.png',
+    github: 'https://github.com/Abhishekkute234/My_Dashboard_next_js.git',
+    livelink: 'https://my-dashboard-next-js.vercel.app/login',
   },
   {
-    title: 'Stripe',
+    title: 'Spam detection using machine learning',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'Hackathon 2023 project. The project is used to track the soil moisture and temperature of the crops.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/spam.png',
+    github: 'https://github.com/Abhishekkute234/SpamGuard.git',
+    livelink: 'https://spam-detection-tool-1.onrender.com',
   },
   {
-    title: 'Stripe',
+    title: 'Agro krushi  ',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'Smart India hackathon 2024 project data science project. The project is used to track the soil moisture and temperature of the crops.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/agro.png',
+    github: 'https://github.com/Abhishekkute234/ArogyaKrishi.git',
+    livelink: 'https://my-dashboard-next-js.vercel.app/login',
   },
   {
-    title: 'Stripe',
+    title: 'Static client agency website',
     description:
-      'A technology company that builds economic infrastructure for the internet.',
+      'A freelance project for client agency website. The website is built using HTML, CSS and JavaScript.',
 
-    image: '/assets/images/current-workspace.jpg',
-    github: 'https://github.com/Abhishekkute234',
-    livelink: 'https://www.linkedin.com/in/abhishek-kute-a85822257/',
+    image: '/assets/images/project/AD.png',
+    github: 'https://github.com/Abhishekkute234/Agency-Website.git',
+    livelink: 'https://adproduction-2375.netlify.app/',
+  },
+
+  {
+    title: '  Built an OpenAI-Style Web Operator from scratch',
+    description:
+      'A freelance project for client agency website. The website is built using HTML, CSS and JavaScript.',
+
+    image: '/assets/images/project/bot.png',
+    github: 'https://github.com/Abhishekkute234/Agency-Website.git',
+    livelink:
+      'https://www.linkedin.com/posts/vivek-nimkarde-9223238b_ai-techtruths-innovationorillusion-ugcPost-7290996173694210048-3PHV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9NxYUB_19T4Ne3V2HSnwwHHoSMftDlOzI',
+  },
+  {
+    title: 'JourneyNest',
+    description: 'A react native app to track your journey and nest',
+
+    image: '/assets/images/project/journynest.png',
+    github: 'https://github.com/Abhishekkute234/JourneyNest.git',
+    livelink: 'https://github.com/Abhishekkute234/JourneyNest.git',
+  },
+  {
+    title: 'My Tube video app React native',
+    description: 'A complete my tube app using react native',
+
+    image: '/assets/images/project/mytube.png',
+    github:
+      'https://github.com/Abhishekkute234/My-Tube-video-app-using-react-native.git',
+    livelink:
+      'https://github.com/Abhishekkute234/My-Tube-video-app-using-react-native.git',
+  },
+  {
+    title: 'Distribution-of-ages-or-genders-in-a-population-using-python',
+    description:
+      'A data science project Distribution-of-ages-or-genders-in-a-population-using-python',
+
+    image: '/assets/images/project/analysis.png',
+    github:
+      'https://github.com/Abhishekkute234/Distribution-of-ages-or-genders-in-a-population-using-python.git',
+    livelink:
+      'https://github.com/Abhishekkute234/Distribution-of-ages-or-genders-in-a-population-using-python.git',
+  },
+  {
+    title:
+      'Data-cleaning-on-Titanic-dataset-relationships-between-variables-and-identify-patterns-and-trends',
+    description:
+      'A data science project Data-cleaning-on-Titanic-dataset-relationships-between-variables-and-identify-patterns-and-trends',
+
+    image: '/assets/images/project/analysis.png',
+    github:
+      'https://github.com/Abhishekkute234/Data-cleaning-on-Titanic-dataset-relationships-between-variables-and-identify-patterns-and-trends-.git',
+    livelink:
+      'https://github.com/Abhishekkute234/Data-cleaning-on-Titanic-dataset-relationships-between-variables-and-identify-patterns-and-trends-.git',
+  },
+  {
+    title: 'Diwali_Sales_Analysis_using_python',
+    description: 'A data science project Diwali_Sales_Analysis_using_python',
+
+    image: '/assets/images/project/analysis.png',
+    github:
+      'https://github.com/Abhishekkute234/Diwali_Sales_Analysis_using_python.git',
+    livelink:
+      'https://github.com/Abhishekkute234/Diwali_Sales_Analysis_using_python.git',
+  },
+  {
+    title: 'Visualize-accident-hotspots-and-contributing-factor',
+    description:
+      'A data science project Visualize-accident-hotspots-and-contributing-factor',
+
+    image: '/assets/images/project/analysis.png',
+    github:
+      'https://github.com/Abhishekkute234/-Visualize-accident-hotspots-and-contributing-factor.git',
+    livelink:
+      'https://github.com/Abhishekkute234/-Visualize-accident-hotspots-and-contributing-factor.git',
+  },
+
+  {
+    title: 'Customer-Churn-Records_analysis',
+    description: 'A data science project Customer-Churn-Records_analysis',
+
+    image: '/assets/images/project/analysis.png',
+    github:
+      'https://github.com/Abhishekkute234/Customer-Churn-Records_analysis.git',
+    livelink:
+      'https://github.com/Abhishekkute234/Customer-Churn-Records_analysis.git',
+  },
+
+  {
+    title: 'Twitter_training',
+    description: 'A data science project Twitter_training',
+
+    image: '/assets/images/project/analysis.png',
+    github: 'https://github.com/Abhishekkute234/twitter_training.git',
+    livelink: 'https://github.com/Abhishekkute234/twitter_training.git',
+  },
+  {
+    title: 'Data science ',
+    description: 'A data science project Twitter_training',
+
+    image: '/assets/images/project/ds.png',
+    github: 'https://github.com/Abhishekkute234/Data-Science-.git',
+    livelink: 'https://github.com/Abhishekkute234/Data-Science-.git',
+  },
+  {
+    title: 'Rust for developers ',
+    description: 'A data science project Twitter_training',
+
+    image: '/assets/images/project/rust.png',
+    github: 'https://github.com/Abhishekkute234/Rust-for-Developers.git',
+    livelink:
+      'https://www.linkedin.com/posts/abhishek-kute-a85822257_rust-systemsprogramming-concurrency-activity-7264258558488150016-QqOk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9NxYUB_19T4Ne3V2HSnwwHHoSMftDlOzI',
+  },
+
+  {
+    title: 'Data structure and algorithm ',
+    description: 'A data science project Twitter_training',
+
+    image: '/assets/images/project/dsa.png',
+    github:
+      'https://github.com/Abhishekkute234/Data-Structure-and-Algorithm-in-CPP.git',
+    livelink:
+      'https://github.com/Abhishekkute234/Data-Structure-and-Algorithm-in-CPP.git',
   },
 ];
 
