@@ -8,7 +8,6 @@ import {
 } from '@/components/Icons';
 import NavIcon from '@/components/navigations/NavIcon';
 import NavIconQuickAccess from '@/components/navigations/NavIconQuickAccess';
-import NavLink from '@/components/navigations/NavLink';
 import NavLinkDropdown from '@/components/navigations/NavLinkDropdown';
 import NavLinkExpanded from '@/components/navigations/NavLinkExpanded';
 import NavLogo from '@/components/navigations/NavLogo';
@@ -16,10 +15,10 @@ import NavLogo from '@/components/navigations/NavLogo';
 import useOnScroll from '@/hooks/useOnScroll';
 
 const workLinks = [
-  { title: 'Projects', href: '/projects' },
-  { title: 'Blogs', href: '/blog' },
   { title: 'Skills & Tools', href: '/work/skills-and-tools' },
+  { title: 'Projects', href: '/projects' },
   { title: 'Experience', href: '/work/experience' },
+  { title: 'Blogs', href: '/blog' },
   { title: 'Studio', href: '/work/studio' },
   { title: 'Contact', href: '/work/contact' },
 ];
