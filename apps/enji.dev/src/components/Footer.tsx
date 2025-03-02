@@ -220,10 +220,6 @@ function Footer() {
                       href: 'https://github.com/Abhishekkute234',
                       isInternal: false,
                     },
-                    {
-                      title: 'Credits',
-                      href: '/credits',
-                    },
                   ]}
                 />
               </div>
