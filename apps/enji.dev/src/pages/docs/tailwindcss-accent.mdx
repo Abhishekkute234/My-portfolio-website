@@ -2,7 +2,7 @@
 title: tailwindcss-accent
 description: Add accent colors for dynamic, flexible color use in your Tailwind CSS project.
 caption: Plugin
-githubUrl: https://github.com/enjidev/tailwindcss-accent
+githubUrl: https://github.com/Abhishekkute234
 npmUrl: https://www.npmjs.com/package/tailwindcss-accent
 layout: Project
 ---
@@ -119,35 +119,3 @@ Let the code speak:
 [Try it out on Tailwind Play](https://play.tailwindcss.com/D1HDP9fJhF)
 
 ---
-
-## Examples
-
-### Real-world Example
-
-This website uses this plugin. By default, all pages use the `violet` accent color, except for pages under the `work/` path, which have a `blue` accent color.
-
-You can see the difference in the table of contents, header caption, text selection, links, etc.
-
-See the [configuration](https://github.com/enjidev/enji.dev/blob/a6078ba395ea65cc9c1a7ea524adb29b9580406d/apps/enji.dev/tailwind.config.js#L54-L57) file and [implementation](https://github.com/enjidev/enji.dev/blob/a6078ba395ea65cc9c1a7ea524adb29b9580406d/apps/enji.dev/src/providers/ColorAccentProvider.tsx#L18-L20) code for details.
-
-### Live Example
-
-Want to see something cool? Click this button and watch the accent color on this page change.
-
-<AccentDemo />
-
-You should already know that the button doesn't change the color classes of all components. This single line of code&mdash;
-
-```js {copy:false}
-document.documentElement.setAttribute('data-accent', newAccent);
-```
-
-&mdash;does the magic by simply changing the html `data-accent` attribute value to the new accent color, and components that use the `-accent-*` color will follow the changes.
-
-Changing your website's accent color has never been this easy 🔥
-
----
-
-## License
-
-`tailwindcss-accent` is licensed under the MIT License.
