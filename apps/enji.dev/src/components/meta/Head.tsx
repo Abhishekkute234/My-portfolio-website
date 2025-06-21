@@ -27,7 +27,7 @@ function Head({
     <NextHead>
       <title>{htmlTitle}</title>
       <meta name="description" content={description} />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="\assets\images\me.svg" />
 
       {/* seo */}
       <link rel="canonical" href={currentUrl} />
