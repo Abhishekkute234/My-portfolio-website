@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import {
   GFGIcon,
   GitHubIcon,
+  Leetcode,
   LinkedInIcon,
   TwitterIcon,
   YoutubeIcon,
@@ -89,6 +90,13 @@ function Navbar() {
                 href="https://www.geeksforgeeks.org/user/abhishek_kute_234/"
                 icon={<GFGIcon className={clsx('h-5 w-5')} />}
                 title="GFG"
+              />
+            </li>
+            <li className={clsx('hidden', 'sm:block')}>
+              <NavIcon
+                href="https://leetcode.com/u/Abhishek_Kute/"
+                icon={<Leetcode className={clsx('h-7 w-8')} />}
+                title="Leetcode"
               />
             </li>
             <li className={clsx('hidden', 'sm:block')}>
