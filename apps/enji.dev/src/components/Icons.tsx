@@ -13,7 +13,50 @@ export function LightIcon({ ...props }: ComponentProps<'svg'>) {
     </svg>
   );
 }
-
+export function Leetcode({ ...props }: ComponentProps<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 80 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8"
+      {...props}
+    >
+      <rect width="80" height="80" rx="16" fill="#232323" />
+      {/* Top left white stroke */}
+      <path
+        d="M46 20L28 38C24 42 24 50 28 54"
+        stroke="#FFFFFF"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Bottom orange stroke */}
+      <path
+        d="M28 54C32 58 40 58 44 54"
+        stroke="#FFA116"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Middle horizontal gray line */}
+      <path
+        d="M38 40H52"
+        stroke="#8B8B8B"
+        strokeWidth="6"
+        strokeLinecap="round"
+      />
+      {/* Upper orange stroke */}
+      <path
+        d="M44 22C46 24 46 28 44 30"
+        stroke="#FFA116"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 export function DarkIcon({ ...props }: ComponentProps<'svg'>) {
   return (
     <svg
