@@ -45,8 +45,8 @@ function HeaderImage() {
             alt="Enji Kusnadi Illustration"
             src="/assets/images/me.png
             "
-            width={457}
-            height={526}
+            width={400}
+            height={500}
             className={clsx(
               'hidden max-w-none',
               'lg:block',
