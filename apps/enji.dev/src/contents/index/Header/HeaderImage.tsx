@@ -43,7 +43,8 @@ function HeaderImage() {
         <m.div initial={{ opacity: 0 }} animate={controlsHeaderImage}>
           <Image
             alt="Enji Kusnadi Illustration"
-            src="/assets/images/me.svg"
+            src="/assets/images/me.png
+            "
             width={457}
             height={526}
             className={clsx(
