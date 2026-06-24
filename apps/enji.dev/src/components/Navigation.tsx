@@ -5,7 +5,6 @@ import {
   GitHubIcon,
   Leetcode,
   LinkedInIcon,
-  TwitterIcon,
   YoutubeIcon,
 } from '@/components/Icons';
 import NavIcon from '@/components/navigations/NavIcon';
@@ -67,7 +66,7 @@ function Navbar() {
             <li className={clsx('hidden', 'sm:block')}>
               <NavIcon
                 href="https://www.linkedin.com/in/abhishek-kute-a85822257/"
-                icon={<TwitterIcon className={clsx('h-5 w-5')} />}
+                icon={<LinkedInIcon className={clsx('h-5 w-5')} />}
                 title="LinkedIn"
               />
             </li>
@@ -82,7 +81,7 @@ function Navbar() {
               <NavIcon
                 href="https://www.youtube.com/@keep_it_sorted"
                 icon={<YoutubeIcon className={clsx('h-5 w-5')} />}
-                title="LinkedIn"
+                title="YouTube"
               />
             </li>
             <li className={clsx('hidden', 'sm:block')}>

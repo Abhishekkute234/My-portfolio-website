@@ -42,7 +42,7 @@ function HeaderImage() {
         </m.div>
         <m.div initial={{ opacity: 0 }} animate={controlsHeaderImage}>
           <Image
-            alt="Enji Kusnadi Illustration"
+            alt="Abhishek Kute Illustration"
             src="/assets/images/me.png
             "
             width={400}

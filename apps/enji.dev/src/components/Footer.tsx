@@ -123,8 +123,8 @@ function FooterDescription() {
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
-            aria-label="My Twitter profile"
-            title="My Twitter profile"
+            aria-label="My YouTube channel"
+            title="My YouTube channel"
           >
             <YoutubeIcon className={clsx('h-5 w-5')} />
           </a>
@@ -147,8 +147,8 @@ function FooterDescription() {
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
-            aria-label="My linkedin profile"
-            title="My Figma profile"
+            aria-label="My LinkedIn profile"
+            title="My LinkedIn profile"
           >
             <LinkedInIcon className={clsx('h-5 w-5')} />
           </a>
