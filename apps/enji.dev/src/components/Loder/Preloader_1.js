@@ -21,17 +21,10 @@ const Preloader = ({ onDone }) => {
       }}
     >
       <DotLottieReact
-        src="https://lottie.host/d30eb575-f70e-4d8b-8495-4bb1825d1f0b/aJzgL5mnX0.lottie"
-        loop
-        autoplay
-      />
-
-      {/* <DotLottieReact
-        src="https://lottie.host/acc0935a-05d2-4f5d-94b3-646a705ba7c2/7C8gXM0eyL.lottie"
-        loop
-        autoplay
-        
-      /> */}
+      src="https://lottie.host/c83b5492-2704-4dd5-8987-5cad4fae12f4/UZjGgB6Fnn.lottie"
+      loop
+      autoplay
+    />
     </div>
   );
 };

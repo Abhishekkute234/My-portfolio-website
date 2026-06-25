@@ -1,3 +1,4 @@
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -14,7 +15,15 @@ function Error404Contents() {
           'dark:text-slate-400'
         )}
       >
-        <h1 className={clsx('py-12 text-center')}>
+        <div className={clsx('flex justify-center')}>
+          <DotLottieReact
+            src="https://lottie.host/2bed34df-2db8-4068-b8d5-4b137ed2cb56/gA4dUxuPx4.lottie"
+            loop
+            autoplay
+            style={{ width: 300, height: 300 }}
+          />
+        </div>
+        <h1 className={clsx('py-8 text-center')}>
           <div className={clsx('mb-3 text-8xl font-extrabold')}>404</div>
           <div className={clsx('text-2xl')}> Page Not Found </div>
         </h1>

@@ -1,6 +1,6 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
@@ -27,15 +27,6 @@ function getDefaultLayout(page: ReactElement): ReactNode {
 
 function App({ Component, pageProps, router }: AppPropsWithLayout) {
   const [isLoading, setIsLoading] = useState(true);
-
-  // Logic to stop the preloader after 4 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
-
-    return () => clearTimeout(timer); // Clean up the timer
-  }, []);
 
   let getLayout;
 

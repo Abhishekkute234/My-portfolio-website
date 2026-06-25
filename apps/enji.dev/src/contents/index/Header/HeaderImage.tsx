@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { m, useAnimationControls } from 'framer-motion';
-import Image from 'next/image';
 
 import HeaderImageAnimation from './HeaderImageAnimation';
 
@@ -40,20 +39,23 @@ function HeaderImage() {
             }}
           />
         </m.div>
-        <m.div initial={{ opacity: 0 }} animate={controlsHeaderImage}>
-          <Image
-            alt="Abhishek Kute Illustration"
-            src="/assets/images/me.png
-            "
-            width={400}
-            height={500}
-            className={clsx(
-              'hidden max-w-none',
-              'lg:block',
-              'dark:brightness-[.82]'
-            )}
-            quality={100}
-            priority
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={controlsHeaderImage}
+          className={clsx('hidden lg:flex', 'items-center justify-center')}
+          style={{ width: 400, height: 500 }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt="Abhishek Kute Logo"
+            src="/assets/images/favicon.ico"
+            style={{
+              width: 380,
+              height: 380,
+              objectFit: 'cover',
+              borderRadius: '50%',
+              filter: 'drop-shadow(0 0 40px rgba(139,92,246,0.5))',
+            }}
           />
         </m.div>
       </div>
