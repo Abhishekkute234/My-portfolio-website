@@ -1,0 +1,116 @@
+---
+title: Getting Started with Next.js
+description: A practical guide to building modern web apps with Next.js, covering routing, data fetching, and deployment.
+lang: en
+date: '2024-01-15'
+tags:
+  - nextjs
+  - react
+  - web-development
+category: nextjs
+caption: Next.js
+---
+
+## What is Next.js?
+
+**Next.js** is a React framework that gives you building blocks to create fast, production-ready web applications. It handles the tooling and configuration you need, letting you focus on building your product.
+
+---
+
+## Key Features
+
+### File-based Routing
+
+Next.js uses a file-system based router. Files inside the `pages/` directory automatically become routes:
+
+```
+pages/
+  index.tsx        →  /
+  blog/
+    index.tsx      →  /blog
+    [slug].tsx     →  /blog/:slug
+```
+
+### Data Fetching
+
+Next.js provides multiple data fetching strategies:
+
+- **`getStaticProps`** — fetch data at build time (SSG)
+- **`getServerSideProps`** — fetch data on every request (SSR)
+- **`getStaticPaths`** — specify dynamic routes to pre-render
+
+```tsx
+export async function getStaticProps() {
+  const data = await fetchData();
+  return { props: { data } };
+}
+```
+
+### API Routes
+
+Create API endpoints by adding files to `pages/api/`:
+
+```ts
+// pages/api/hello.ts
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Hello World' });
+}
+```
+
+---
+
+## Routing
+
+### Dynamic Routes
+
+Use brackets to define dynamic segments:
+
+```
+pages/blog/[slug].tsx   →  /blog/my-post
+pages/[...slug].tsx     →  /a/b/c  (catch-all)
+```
+
+### Navigation
+
+Use the `Link` component for declarative navigation:
+
+```tsx
+import Link from 'next/link';
+
+// Declarative
+// Link href="/about" - About
+```
+
+Use `useRouter` for programmatic navigation:
+
+```ts
+import { useRouter } from 'next/router';
+
+const router = useRouter();
+router.push('/dashboard');
+```
+
+---
+
+## Image Optimization
+
+The built-in `Image` component automatically optimizes images:
+
+```tsx
+import Image from 'next/image';
+
+// Image src="/photo.jpg" alt="Photo" width={800} height={600} priority
+```
+
+---
+
+## Deployment
+
+The easiest way to deploy is with [Vercel](https://vercel.com), the creators of Next.js. Push your code and Vercel handles everything automatically.
+
+For self-hosting, build the production bundle with `next build`, then start with `next start`:
+
+```bash
+pnpm build
+pnpm start
+```
