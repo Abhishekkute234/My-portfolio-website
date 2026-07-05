@@ -1,10 +1,8 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { useState } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
-import Preloader from '@/components/Loder/Preloader_1';
 import Provider from '@/providers';
 
 import type { NextPage } from 'next';
@@ -26,8 +24,6 @@ function getDefaultLayout(page: ReactElement): ReactNode {
 }
 
 function App({ Component, pageProps, router }: AppPropsWithLayout) {
-  const [isLoading, setIsLoading] = useState(true);
-
   let getLayout;
 
   if (router.query.simpleLayout) {
@@ -40,18 +36,12 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
 
   return (
     <Provider>
-      {isLoading ? (
-        // Show Preloader while loading
-        <Preloader onDone={() => setIsLoading(false)} />
-      ) : (
-        // Show the main layout after loading
-        <RootLayout>
-          <SpeedInsights />
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          {getLayout(<Component {...pageProps} />)}
-          <GoogleAnalytics gaId="G-FB9QLDNKNN" />
-        </RootLayout>
-      )}
+      <RootLayout>
+        <SpeedInsights />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        {getLayout(<Component {...pageProps} />)}
+        <GoogleAnalytics gaId="G-FB9QLDNKNN" />
+      </RootLayout>
     </Provider>
   );
 }

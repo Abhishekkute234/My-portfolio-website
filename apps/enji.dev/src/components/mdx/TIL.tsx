@@ -97,8 +97,7 @@ export function Item({ children = null }: PropsWithChildren) {
       <div
         className={clsx(
           'pointer-events-none sticky top-[86px] -ml-8 pb-12',
-          'md:-ml-12 lg:-ml-24',
-          'fm:relative fm:top-0'
+          'md:-ml-12 lg:-ml-24'
         )}
       >
         <div
@@ -135,8 +134,7 @@ export function Items({
       <div className={clsx('hidden', 'md:block md:pb-24')}>
         <div
           className={clsx(
-            'mt-4 pt-1.5 md:sticky md:top-[86px]',
-            'fm:relative fm:top-0'
+            'mt-4 pt-1.5 md:sticky md:top-[86px]'
           )}
         >
           <div

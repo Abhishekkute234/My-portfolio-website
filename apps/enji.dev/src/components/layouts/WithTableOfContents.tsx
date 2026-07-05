@@ -25,8 +25,7 @@ function PageWithMDX({
           <div
             className={clsx(
               'sticky top-24 z-[901] w-64',
-              'xl:w-[272px]',
-              'fm:relative fm:top-0'
+              'xl:w-[272px]'
             )}
           >
             <TableOfContents items={tableOfContents} />

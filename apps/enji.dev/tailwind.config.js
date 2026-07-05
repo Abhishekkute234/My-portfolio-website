@@ -39,9 +39,6 @@ module.exports = {
     },
   },
   plugins: [
-    function ({ addVariant }) {
-      addVariant('fm', '.fm &');
-    },
     function ({ matchUtilities, theme }) {
       matchUtilities(
         {

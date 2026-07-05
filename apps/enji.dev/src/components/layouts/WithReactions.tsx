@@ -10,8 +10,7 @@ function WithReactions() {
     <div
       className={clsx(
         'pointer-events-none sticky bottom-8 z-[902] mt-16',
-        'lg:bottom-8 lg:mt-24',
-        'fm:static'
+        'lg:bottom-8 lg:mt-24'
       )}
     >
       <WithTableOfContentsMock>

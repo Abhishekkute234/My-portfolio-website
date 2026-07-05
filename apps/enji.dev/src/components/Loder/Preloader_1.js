@@ -6,7 +6,7 @@ const Preloader = ({ onDone }) => {
     // Trigger the `onDone` callback after 4 seconds
     const timer = setTimeout(() => {
       onDone();
-    }, 3334);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [onDone]);
 

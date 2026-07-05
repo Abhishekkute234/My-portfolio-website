@@ -13,6 +13,7 @@ const components: MDXComponents = {
   hr: Hr,
   pre: Pre,
   table: Table,
+  Reactions: () => null, // Placeholder to prevent build failure on deleted Reactions component
 };
 
 export default components;
