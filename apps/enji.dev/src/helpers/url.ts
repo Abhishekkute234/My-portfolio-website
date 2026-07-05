@@ -7,7 +7,7 @@ export const getBaseUrl = () => {
     default:
       return process.env.NEXT_PUBLIC_VERCEL_URL
         ? `http://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-        : 'http://localhost:3000';
+        : 'https://portfolio-website-xyz.vercel.app/';
   }
 };
 
