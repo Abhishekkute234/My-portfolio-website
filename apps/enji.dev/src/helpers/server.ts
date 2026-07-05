@@ -3,7 +3,7 @@ import { createHash } from 'crypto';
 import type { NextApiRequest } from 'next';
 
 export const getSessionId = (req: NextApiRequest) => {
-  const ipAddress = req.headers['x-forwarded-for'] || 'localhost';
+  const ipAddress = req.headers['x-forwarded-for'] || 'https://portfolio-website-xyz.vercel.app/';
 
   // hashes the user's IP address and combines it with
   // a salt to create a unique session ID that preserves
