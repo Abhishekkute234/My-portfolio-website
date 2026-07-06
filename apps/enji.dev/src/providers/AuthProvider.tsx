@@ -33,7 +33,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     refreshUser();
   }, []);
 
+  const checkConfig = () => {
+    const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID;
+    if (!projectId || projectId.replace(/^"|"$/g, '').trim() === '') {
+      throw new Error('Appwrite Project ID is missing. Please configure NEXT_PUBLIC_APPWRITE_PROJECT_ID in your environment variables.');
+    }
+  };
+
   const loginWithEmail = async (email: string, password: string) => {
+    checkConfig();
     setLoading(true);
     try {
       await account.createEmailPasswordSession(email, password);
@@ -45,6 +53,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signupWithEmail = async (email: string, password: string, name?: string) => {
+    checkConfig();
     setLoading(true);
     try {
       // Create user account
@@ -60,6 +69,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const loginWithOAuth = async (provider: 'google' | 'github' | 'discord') => {
     try {
+      checkConfig();
       const redirectUrl = `${window.location.origin}/auth/callback`;
       const failureUrl = `${window.location.origin}/login`;
       
