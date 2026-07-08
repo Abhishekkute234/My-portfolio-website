@@ -73,14 +73,14 @@ function HeaderImageAnimation({
 
       {/* Pixel sunglasses */}
       <m.path
-        d="M35 40h30" // Glasses bridge
+        d="M35 40h30"
         variants={animation}
         custom={4}
         stroke="black"
         fill="none"
       />
       <m.path
-        d="M35 40h5v5h-5zm5 0h5v5h-5zm15 0h5v5h-5zm5 0h5v5h-5z" // Glasses pixels
+        d="M35 40h5v5h-5zm5 0h5v5h-5zm15 0h5v5h-5zm5 0h5v5h-5z"
         variants={animation}
         custom={4}
         fill="black"
@@ -99,21 +99,3 @@ function HeaderImageAnimation({
 }
 
 export default HeaderImageAnimation;
-
-// import Preloader from '@/components/Loder/Preloader';
-
-// interface HeaderImageAnimationProps {
-//   onAnimationComplete?: () => void;
-// }
-
-// function HeaderImageAnimation({
-//   onAnimationComplete = () => {},
-// }: HeaderImageAnimationProps) {
-//   return (
-//     <div className="flex flex-col items-center justify-center">
-//       <Preloader onDone={onAnimationComplete} />
-//     </div>
-//   );
-// }
-
-// export default HeaderImageAnimation;

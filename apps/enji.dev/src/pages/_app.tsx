@@ -1,9 +1,11 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { useState, useEffect } from 'react';
 
 import RootLayout from '@/components/layouts/Root';
 import WithNavigationFooter from '@/components/layouts/WithNavigationFooter';
 import Provider from '@/providers';
+import Preloader from '@/components/Loder/Preloader';
 
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
@@ -24,6 +26,13 @@ function getDefaultLayout(page: ReactElement): ReactNode {
 }
 
 function App({ Component, pageProps, router }: AppPropsWithLayout) {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   let getLayout;
 
   if (router.query.simpleLayout) {
@@ -37,6 +46,17 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
   return (
     <Provider>
       <RootLayout>
+        {isMounted && isLoading && (
+          <div
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 9999,
+            }}
+          >
+            <Preloader onDone={() => setIsLoading(false)} />
+          </div>
+        )}
         <SpeedInsights />
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         {getLayout(<Component {...pageProps} />)}
