@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { prisma } from '@/utils/prisma';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { Client, Account } from 'appwrite';
+import { getSessionUser } from '@/lib/auth';
 
 const contactSchema = z.object({
   message: z.string().min(1, 'Message is required').max(2000),
@@ -17,32 +17,16 @@ export default async function handler(
   }
 
   try {
-    const authHeader = req.headers.authorization;
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    // Verify session via httpOnly cookie (JWT)
+    const sessionUser = getSessionUser(req);
+    if (!sessionUser) {
       return res.status(401).json({ success: false, message: 'Unauthorized. Please sign in.' });
     }
-    const jwt = authHeader.split(' ')[1];
 
     const { message } = contactSchema.parse(req.body);
 
-    const endpoint = (process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1').replace(/^"|"$/g, '').trim();
-    const projectId = (process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID || '').replace(/^"|"$/g, '').trim();
-
-    const client = new Client();
-    client
-      .setEndpoint(endpoint)
-      .setProject(projectId);
-    client.setJWT(jwt);
-
-    const account = new Account(client);
-    const appwriteUser = await account.get();
-    
-    const email = appwriteUser.email;
-    const name = appwriteUser.name || email.split('@')[0];
-
-    if (!email) {
-      return res.status(401).json({ success: false, message: 'Invalid session/user email.' });
-    }
+    const email = sessionUser.email;
+    const name = sessionUser.name || email.split('@')[0];
 
     const newMessage = await prisma.contactMessage.create({
       data: {
@@ -70,14 +54,6 @@ export default async function handler(
     }
 
     console.error('Contact API Error:', error);
-
-    const errObj = error as any;
-    if (errObj.code === 401 || errObj.status === 401) {
-      return res.status(401).json({
-        success: false,
-        message: `Session invalid or expired: ${error.message || error}`,
-      });
-    }
 
     return res.status(500).json({
       success: false,

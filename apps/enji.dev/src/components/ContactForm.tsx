@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import axios from 'axios';
 import Link from 'next/link';
 import { useAuth } from '@/providers/AuthProvider';
-import { account } from '@/lib/appwrite';
 
 export default function ContactForm() {
   const { user, loading } = useAuth();
@@ -22,16 +21,7 @@ export default function ContactForm() {
     setSubmitting(true);
     const loadToast = toast.loading('Sending message...');
     try {
-      const jwtRes = await account.createJWT();
-      const jwt = jwtRes.jwt;
-
-      const response = await axios.post('/api/contact', {
-        message,
-      }, {
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-        },
-      });
+      const response = await axios.post('/api/contact', { message });
 
       if (response.data.success) {
         toast.success('Thank you! Your message has been sent.');

@@ -1,28 +1,44 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { Models, ID, OAuthProvider } from 'appwrite';
-import { account } from '@/lib/appwrite';
+import axios from 'axios';
+
+// ---------------------------------------------------------------------------
+// Types
+// ---------------------------------------------------------------------------
+
+export interface AuthUser {
+  id: string;
+  email: string;
+  name?: string | null;
+}
 
 interface AuthContextType {
-  user: Models.User<any> | null;
+  user: AuthUser | null;
   loading: boolean;
   loginWithEmail: (email: string, password: string) => Promise<void>;
   signupWithEmail: (email: string, password: string, name?: string) => Promise<void>;
-  loginWithOAuth: (provider: 'google' | 'github' | 'discord') => Promise<void>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
 }
 
+// ---------------------------------------------------------------------------
+// Context
+// ---------------------------------------------------------------------------
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+// ---------------------------------------------------------------------------
+// Provider
+// ---------------------------------------------------------------------------
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<Models.User<any> | null>(null);
+  const [user, setUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   const refreshUser = async () => {
     try {
-      const currentUser = await account.get();
-      setUser(currentUser);
-    } catch (error) {
+      const res = await axios.get<{ user: AuthUser }>('/api/auth/me');
+      setUser(res.data.user);
+    } catch {
       setUser(null);
     } finally {
       setLoading(false);
@@ -33,68 +49,36 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     refreshUser();
   }, []);
 
-  const checkConfig = () => {
-    const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID;
-    if (!projectId || projectId.replace(/^"|"$/g, '').trim() === '') {
-      throw new Error('Appwrite Project ID is missing. Please configure NEXT_PUBLIC_APPWRITE_PROJECT_ID in your environment variables.');
-    }
-  };
-
   const loginWithEmail = async (email: string, password: string) => {
-    checkConfig();
     setLoading(true);
     try {
-      await account.createEmailPasswordSession(email, password);
-      await refreshUser();
-    } catch (error) {
+      const res = await axios.post<{ user: AuthUser }>('/api/auth/login', { email, password });
+      setUser(res.data.user);
+    } catch (error: any) {
+      const message = error.response?.data?.message || 'Failed to sign in. Please verify your credentials.';
+      throw new Error(message);
+    } finally {
       setLoading(false);
-      throw error;
     }
   };
 
   const signupWithEmail = async (email: string, password: string, name?: string) => {
-    checkConfig();
     setLoading(true);
     try {
-      // Create user account
-      await account.create(ID.unique(), email, password, name);
-      // Automatically login user
-      await account.createEmailPasswordSession(email, password);
-      await refreshUser();
-    } catch (error) {
+      const res = await axios.post<{ user: AuthUser }>('/api/auth/signup', { email, password, name });
+      setUser(res.data.user);
+    } catch (error: any) {
+      const message = error.response?.data?.message || 'Failed to create account. Please try again.';
+      throw new Error(message);
+    } finally {
       setLoading(false);
-      throw error;
-    }
-  };
-
-  const loginWithOAuth = async (provider: 'google' | 'github' | 'discord') => {
-    try {
-      checkConfig();
-      const redirectUrl = `${window.location.origin}/auth/callback`;
-      const failureUrl = `${window.location.origin}/login`;
-      
-      let appwriteProvider: OAuthProvider;
-      if (provider === 'google') {
-        appwriteProvider = OAuthProvider.Google;
-      } else if (provider === 'github') {
-        appwriteProvider = OAuthProvider.Github;
-      } else if (provider === 'discord') {
-        appwriteProvider = OAuthProvider.Discord;
-      } else {
-        throw new Error(`Unsupported OAuth provider: ${provider}`);
-      }
-
-      await account.createOAuth2Session(appwriteProvider, redirectUrl, failureUrl);
-    } catch (error) {
-      console.error(`${provider} OAuth login failed:`, error);
-      throw error;
     }
   };
 
   const logout = async () => {
     setLoading(true);
     try {
-      await account.deleteSession('current');
+      await axios.post('/api/auth/logout');
       setUser(null);
     } catch (error) {
       console.error('Logout failed:', error);
@@ -111,7 +95,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         loading,
         loginWithEmail,
         signupWithEmail,
-        loginWithOAuth,
         logout,
         refreshUser,
       }}
